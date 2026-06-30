@@ -1,0 +1,65 @@
+[
+  {
+    "firstName": "user",
+    "lastName": "user",
+    "email": "user1@gmail.com",
+    "userName": "1@user1@gmail.com",
+    "phoneNumber": "123456789",
+    "emailConfirmed": true,
+    "tenantId": 1
+  },
+  {
+    "firstName": "user",
+    "lastName": "user",
+    "email": "user11@gmail.com",
+    "userName": "1@user11@gmail.com",
+    "phoneNumber": "123456789",
+    "emailConfirmed": true,
+    "tenantId": 1
+  },
+  {
+    "firstName": "admin",
+    "lastName": "admin",
+    "email": "admin1@gmail.com",
+    "userName": "1@admin1@gmail.com",
+    "phoneNumber": "123456789",
+    "emailConfirmed": true,
+    "tenantId": 1
+  },
+  {
+    "firstName": "user",
+    "lastName": "user",
+    "email": "user2@gmail.com",
+    "userName": "2@user2@gmail.com",
+    "phoneNumber": "123456789",
+    "emailConfirmed": true,
+    "tenantId": 2
+  },
+  {
+    "firstName": "admin",
+    "lastName": "admin",
+    "email": "admin2@gmail.com",
+    "userName": "2@admin2@gmail.com",
+    "phoneNumber": "123456789",
+    "emailConfirmed": true,
+    "tenantId": 2
+  },
+  {
+    "firstName": "user",
+    "lastName": "user",
+    "email": "user3@gmail.com",
+    "userName": "3@user3@gmail.com",
+    "phoneNumber": "123456789",
+    "emailConfirmed": true,
+    "tenantId": 3
+  },
+  {
+    "firstName": "admin",
+    "lastName": "admin",
+    "email": "admin3@gmail.com",
+    "userName": "3@admin3@gmail.com",
+    "phoneNumber": "123456789",
+    "emailConfirmed": true,
+    "tenantId": 3
+  }
+]

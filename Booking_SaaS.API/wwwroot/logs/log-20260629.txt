@@ -1,0 +1,1822 @@
+[2026-06-29 18:03:35.054 INF] Start installing Hangfire SQL objects...
+    Source: Hangfire.SqlServer.SqlServerObjectsInstaller | RequestId:  | Thread: 9
+
+---
+[2026-06-29 18:03:36.304 INF] Hangfire SQL objects installed.
+    Source: Hangfire.SqlServer.SqlServerObjectsInstaller | RequestId:  | Thread: 9
+
+---
+[2026-06-29 18:03:39.855 INF] Starting Hangfire Server using job storage: 'SQL Server: .@Booking_SaaS'
+    Source: Hangfire.BackgroundJobServer | RequestId:  | Thread: 9
+
+---
+[2026-06-29 18:03:39.858 INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+    Source: Hangfire.BackgroundJobServer | RequestId:  | Thread: 9
+
+---
+[2026-06-29 18:03:39.862 INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+    Source: Hangfire.BackgroundJobServer | RequestId:  | Thread: 9
+
+---
+[2026-06-29 18:03:40.162 INF] Server ahmed:14496:e9c0a23e successfully announced in 249.4761 ms
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 16
+
+---
+[2026-06-29 18:03:40.175 INF] Server ahmed:14496:e9c0a23e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 16
+
+---
+[2026-06-29 18:03:40.300 INF] 1 servers were removed due to timeout
+    Source: Hangfire.Server.ServerWatchdog | RequestId:  | Thread: 18
+
+---
+[2026-06-29 18:03:40.538 INF] Server ahmed:14496:e9c0a23e all the dispatchers started
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 16
+
+---
+[2026-06-29 18:03:52.126 WRN] HTTP POST /api/resources/1/schedules responded 401 in 1679.7184 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSP:00000001 | Thread: 14
+
+---
+[2026-06-29 18:03:56.425 WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+    Source: LuckyPennySoftware.AutoMapper.License | RequestId: 0HNMLTUG71SSP:00000002 | Thread: 14
+
+---
+[2026-06-29 18:03:59.566 INF] HTTP POST /api/Authentication/login responded 200 in 3928.6030 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSP:00000002 | Thread: 13
+
+---
+[2026-06-29 18:04:07.504 INF] HTTP POST /api/resources/1/schedules responded 200 in 5619.0424 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSP:00000003 | Thread: 9
+
+---
+[2026-06-29 18:04:17.811 INF] HTTP POST /api/resources/1/schedules responded 200 in 699.4823 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSP:00000004 | Thread: 13
+
+---
+[2026-06-29 18:04:44.672 INF] HTTP GET /hangfire responded 200 in 1337.6528 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000001 | Thread: 14
+
+---
+[2026-06-29 18:04:44.948 INF] HTTP GET /hangfire/css-dark18230169257719 responded 200 in 129.3051 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000005 | Thread: 11
+
+---
+[2026-06-29 18:04:45.026 INF] HTTP GET /hangfire/css18230372733643 responded 200 in 213.8880 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000003 | Thread: 13
+
+---
+[2026-06-29 18:04:45.037 INF] HTTP GET /hangfire/js182301733065191 responded 200 in 178.8198 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000007 | Thread: 47
+
+---
+[2026-06-29 18:04:45.164 INF] HTTP GET /hangfire/fonts/glyphicons-halflings-regular/woff2 responded 200 in 7.6195 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000009 | Thread: 11
+
+---
+[2026-06-29 18:04:48.511 INF] HTTP POST /hangfire/stats responded 200 in 192.2623 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000000B | Thread: 11
+
+---
+[2026-06-29 18:04:50.685 INF] HTTP POST /hangfire/stats responded 200 in 110.9654 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000000D | Thread: 11
+
+---
+[2026-06-29 18:04:51.250 INF] HTTP GET /hangfire/jobs/enqueued responded 200 in 96.6787 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000000F | Thread: 47
+
+---
+[2026-06-29 18:04:53.363 INF] HTTP POST /hangfire/stats responded 200 in 26.9163 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000011 | Thread: 11
+
+---
+[2026-06-29 18:04:53.966 INF] HTTP GET /hangfire/jobs/scheduled responded 200 in 287.5109 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000013 | Thread: 47
+
+---
+[2026-06-29 18:04:56.103 INF] HTTP POST /hangfire/stats responded 200 in 34.6103 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000015 | Thread: 47
+
+---
+[2026-06-29 18:04:58.168 INF] HTTP POST /hangfire/stats responded 200 in 27.8353 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000017 | Thread: 47
+
+---
+[2026-06-29 18:05:00.205 INF] HTTP POST /hangfire/stats responded 200 in 4.9718 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000019 | Thread: 11
+
+---
+[2026-06-29 18:05:02.236 INF] HTTP POST /hangfire/stats responded 200 in 8.1923 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000001B | Thread: 47
+
+---
+[2026-06-29 18:05:03.062 INF] HTTP GET /hangfire/recurring responded 200 in 415.8382 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000001D | Thread: 11
+
+---
+[2026-06-29 18:05:05.186 INF] HTTP POST /hangfire/stats responded 200 in 30.5517 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000001F | Thread: 11
+
+---
+[2026-06-29 18:05:07.244 INF] HTTP POST /hangfire/stats responded 200 in 32.0550 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000021 | Thread: 47
+
+---
+[2026-06-29 18:05:10.524 INF] HTTP POST /hangfire/stats responded 200 in 254.5364 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000025 | Thread: 46
+
+---
+[2026-06-29 18:05:10.736 INF] HTTP POST /hangfire/recurring/remove responded 204 in 470.4212 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000023 | Thread: 11
+
+---
+[2026-06-29 18:05:10.851 INF] HTTP GET /hangfire/recurring responded 200 in 68.7783 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000027 | Thread: 11
+
+---
+[2026-06-29 18:05:12.966 INF] HTTP POST /hangfire/stats responded 200 in 36.5041 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000029 | Thread: 46
+
+---
+[2026-06-29 18:05:13.260 INF] HTTP GET /hangfire/jobs/enqueued responded 200 in 39.0071 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000002B | Thread: 11
+
+---
+[2026-06-29 18:05:14.556 INF] HTTP GET /hangfire/jobs/scheduled responded 200 in 62.7237 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000002D | Thread: 46
+
+---
+[2026-06-29 18:05:16.648 INF] HTTP POST /hangfire/stats responded 200 in 26.5270 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000002F | Thread: 11
+
+---
+[2026-06-29 18:05:18.708 INF] HTTP POST /hangfire/stats responded 200 in 24.1300 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000031 | Thread: 46
+
+---
+[2026-06-29 18:05:20.765 INF] HTTP POST /hangfire/stats responded 200 in 27.3962 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000033 | Thread: 14
+
+---
+[2026-06-29 18:05:23.320 INF] HTTP POST /hangfire/stats responded 200 in 28.4929 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000035 | Thread: 14
+
+---
+[2026-06-29 18:05:26.328 INF] HTTP POST /hangfire/stats responded 200 in 41.0445 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000037 | Thread: 14
+
+---
+[2026-06-29 18:05:29.305 INF] HTTP POST /api/Authentication/login responded 200 in 398.0177 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSP:00000005 | Thread: 11
+
+---
+[2026-06-29 18:05:29.348 INF] HTTP POST /hangfire/stats responded 200 in 59.1296 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000039 | Thread: 14
+
+---
+[2026-06-29 18:05:32.319 INF] HTTP POST /hangfire/stats responded 200 in 25.0267 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000003B | Thread: 11
+
+---
+[2026-06-29 18:05:35.332 INF] HTTP POST /hangfire/stats responded 200 in 32.0709 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000003D | Thread: 11
+
+---
+[2026-06-29 18:05:38.335 INF] HTTP POST /hangfire/stats responded 200 in 39.7684 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000003F | Thread: 11
+
+---
+[2026-06-29 18:05:41.322 INF] HTTP POST /hangfire/stats responded 200 in 34.9743 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000041 | Thread: 46
+
+---
+[2026-06-29 18:05:44.316 INF] HTTP POST /hangfire/stats responded 200 in 27.4272 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000043 | Thread: 46
+
+---
+[2026-06-29 18:05:47.327 INF] HTTP POST /hangfire/stats responded 200 in 36.4539 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000045 | Thread: 11
+
+---
+[2026-06-29 18:05:50.323 INF] HTTP POST /hangfire/stats responded 200 in 31.4945 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000047 | Thread: 46
+
+---
+[2026-06-29 18:05:53.338 INF] HTTP POST /hangfire/stats responded 200 in 38.0563 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000049 | Thread: 46
+
+---
+[2026-06-29 18:05:56.313 INF] HTTP POST /hangfire/stats responded 200 in 29.7248 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000004B | Thread: 46
+
+---
+[2026-06-29 18:05:59.298 INF] HTTP POST /hangfire/stats responded 200 in 5.7047 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000004D | Thread: 11
+
+---
+[2026-06-29 18:06:02.292 INF] HTTP POST /hangfire/stats responded 200 in 5.5683 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000004F | Thread: 46
+
+---
+[2026-06-29 18:06:05.102 WRN] HTTP POST /api/schedules/3/bookings responded 400 in 104.9423 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSP:00000006 | Thread: 14
+
+---
+[2026-06-29 18:06:05.353 INF] HTTP POST /hangfire/stats responded 200 in 65.7441 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000051 | Thread: 14
+
+---
+[2026-06-29 18:06:08.321 INF] HTTP POST /hangfire/stats responded 200 in 29.0634 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000053 | Thread: 11
+
+---
+[2026-06-29 18:06:11.316 INF] HTTP POST /hangfire/stats responded 200 in 30.4022 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000055 | Thread: 11
+
+---
+[2026-06-29 18:06:14.332 INF] HTTP POST /hangfire/stats responded 200 in 35.6467 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000057 | Thread: 14
+
+---
+[2026-06-29 18:06:17.335 INF] HTTP POST /hangfire/stats responded 200 in 42.1174 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000059 | Thread: 11
+
+---
+[2026-06-29 18:06:18.678 INF] HTTP POST /api/schedules/3/bookings responded 200 in 638.1036 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSP:00000007 | Thread: 11
+
+---
+[2026-06-29 18:06:20.331 INF] HTTP POST /hangfire/stats responded 200 in 45.4365 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000005B | Thread: 46
+
+---
+[2026-06-29 18:06:23.315 INF] HTTP POST /hangfire/stats responded 200 in 32.0349 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000005D | Thread: 46
+
+---
+[2026-06-29 18:06:26.307 INF] HTTP POST /hangfire/stats responded 200 in 24.8221 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000005F | Thread: 11
+
+---
+[2026-06-29 18:06:29.295 INF] HTTP POST /hangfire/stats responded 200 in 7.7024 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000061 | Thread: 11
+
+---
+[2026-06-29 18:06:31.446 INF] HTTP POST /api/Authentication/login responded 200 in 328.9783 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSP:00000008 | Thread: 46
+
+---
+[2026-06-29 18:06:32.289 INF] HTTP POST /hangfire/stats responded 200 in 5.1673 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000063 | Thread: 46
+
+---
+[2026-06-29 18:06:35.318 INF] HTTP POST /hangfire/stats responded 200 in 33.5177 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000065 | Thread: 14
+
+---
+[2026-06-29 18:06:36.952 INF] HTTP POST /api/schedules/3/bookings responded 200 in 88.8352 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSP:00000009 | Thread: 14
+
+---
+[2026-06-29 18:06:38.323 INF] HTTP POST /hangfire/stats responded 200 in 35.9590 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000067 | Thread: 14
+
+---
+[2026-06-29 18:06:41.315 INF] HTTP POST /hangfire/stats responded 200 in 30.1566 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000069 | Thread: 14
+
+---
+[2026-06-29 18:06:42.758 INF] HTTP POST /api/Authentication/login responded 200 in 326.4207 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSP:0000000A | Thread: 11
+
+---
+[2026-06-29 18:06:44.321 INF] HTTP POST /hangfire/stats responded 200 in 28.1828 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000006B | Thread: 14
+
+---
+[2026-06-29 18:06:47.334 INF] HTTP POST /hangfire/stats responded 200 in 48.6258 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000006D | Thread: 14
+
+---
+[2026-06-29 18:06:50.329 INF] HTTP POST /hangfire/stats responded 200 in 33.9420 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000006F | Thread: 11
+
+---
+[2026-06-29 18:06:53.327 INF] HTTP POST /hangfire/stats responded 200 in 33.0959 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000071 | Thread: 11
+
+---
+[2026-06-29 18:06:54.514 INF] HTTP POST /api/schedules/4/bookings responded 200 in 72.8537 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSP:0000000B | Thread: 46
+
+---
+[2026-06-29 18:06:56.332 INF] HTTP POST /hangfire/stats responded 200 in 34.3336 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000073 | Thread: 46
+
+---
+[2026-06-29 18:06:59.320 INF] HTTP POST /hangfire/stats responded 200 in 32.3188 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000075 | Thread: 46
+
+---
+[2026-06-29 18:07:01.566 INF] HTTP POST /api/Authentication/login responded 200 in 353.9112 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSP:0000000C | Thread: 11
+
+---
+[2026-06-29 18:07:02.327 INF] HTTP POST /hangfire/stats responded 200 in 30.0031 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000077 | Thread: 46
+
+---
+[2026-06-29 18:07:05.320 INF] HTTP POST /hangfire/stats responded 200 in 36.5279 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000079 | Thread: 46
+
+---
+[2026-06-29 18:07:05.828 INF] HTTP POST /api/schedules/4/bookings responded 200 in 1215.3354 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSP:0000000D | Thread: 14
+
+---
+[2026-06-29 18:07:08.318 INF] HTTP POST /hangfire/stats responded 200 in 32.5899 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000007B | Thread: 46
+
+---
+[2026-06-29 18:07:11.315 INF] HTTP POST /hangfire/stats responded 200 in 33.2952 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000007D | Thread: 14
+
+---
+[2026-06-29 18:07:15.784 INF] HTTP POST /hangfire/stats responded 200 in 488.7938 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000007F | Thread: 14
+
+---
+[2026-06-29 18:07:18.301 INF] HTTP POST /hangfire/stats responded 200 in 4.9095 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000081 | Thread: 46
+
+---
+[2026-06-29 18:07:21.292 INF] HTTP POST /hangfire/stats responded 200 in 7.4134 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000083 | Thread: 9
+
+---
+[2026-06-29 18:07:24.324 INF] HTTP POST /hangfire/stats responded 200 in 28.5545 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000085 | Thread: 46
+
+---
+[2026-06-29 18:07:27.345 INF] HTTP POST /hangfire/stats responded 200 in 49.3235 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000087 | Thread: 9
+
+---
+[2026-06-29 18:07:30.317 INF] HTTP POST /hangfire/stats responded 200 in 27.2137 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000089 | Thread: 46
+
+---
+[2026-06-29 18:07:33.295 INF] HTTP POST /hangfire/stats responded 200 in 5.7654 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000008B | Thread: 9
+
+---
+[2026-06-29 18:07:36.298 INF] HTTP POST /hangfire/stats responded 200 in 5.8528 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000008D | Thread: 9
+
+---
+[2026-06-29 18:07:39.290 INF] HTTP POST /hangfire/stats responded 200 in 6.4477 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000008F | Thread: 46
+
+---
+[2026-06-29 18:07:42.297 INF] HTTP POST /hangfire/stats responded 200 in 4.4454 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000091 | Thread: 46
+
+---
+[2026-06-29 18:07:45.300 INF] HTTP POST /hangfire/stats responded 200 in 3.2386 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000093 | Thread: 14
+
+---
+[2026-06-29 18:07:48.286 INF] HTTP POST /hangfire/stats responded 200 in 3.8715 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000095 | Thread: 46
+
+---
+[2026-06-29 18:07:51.300 INF] HTTP POST /hangfire/stats responded 200 in 6.2757 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000097 | Thread: 14
+
+---
+[2026-06-29 18:07:54.296 INF] HTTP POST /hangfire/stats responded 200 in 5.4955 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000099 | Thread: 14
+
+---
+[2026-06-29 18:07:57.288 INF] HTTP POST /hangfire/stats responded 200 in 5.1820 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000009B | Thread: 46
+
+---
+[2026-06-29 18:08:00.301 INF] HTTP POST /hangfire/stats responded 200 in 5.5488 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000009D | Thread: 11
+
+---
+[2026-06-29 18:08:02.349 INF] HTTP POST /hangfire/stats responded 200 in 7.1722 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000009F | Thread: 14
+
+---
+[2026-06-29 18:08:05.318 INF] HTTP POST /hangfire/stats responded 200 in 31.5613 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000A1 | Thread: 14
+
+---
+[2026-06-29 18:08:07.351 INF] HTTP POST /hangfire/stats responded 200 in 4.7680 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000A3 | Thread: 11
+
+---
+[2026-06-29 18:08:09.390 INF] HTTP POST /hangfire/stats responded 200 in 5.3214 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000A5 | Thread: 11
+
+---
+[2026-06-29 18:08:10.422 INF] HTTP GET /hangfire/jobs/details/3 responded 200 in 147.1161 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000A7 | Thread: 11
+
+---
+[2026-06-29 18:08:12.571 INF] HTTP POST /hangfire/stats responded 200 in 5.3034 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000A9 | Thread: 46
+
+---
+[2026-06-29 18:08:13.449 INF] HTTP GET /hangfire/jobs/enqueued responded 200 in 11.6212 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000AB | Thread: 46
+
+---
+[2026-06-29 18:08:14.434 INF] HTTP GET /hangfire/jobs/scheduled responded 200 in 35.3200 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000AD | Thread: 46
+
+---
+[2026-06-29 18:08:16.500 INF] HTTP POST /hangfire/stats responded 200 in 5.2889 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000AF | Thread: 46
+
+---
+[2026-06-29 18:08:17.768 INF] HTTP GET /hangfire/jobs/details/3 responded 200 in 12.8928 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000B1 | Thread: 11
+
+---
+[2026-06-29 18:08:19.834 INF] HTTP POST /hangfire/stats responded 200 in 4.7257 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000B3 | Thread: 46
+
+---
+[2026-06-29 18:08:19.946 INF] HTTP GET /hangfire/jobs/enqueued responded 200 in 12.2221 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000B5 | Thread: 11
+
+---
+[2026-06-29 18:08:20.866 INF] HTTP GET /hangfire/jobs/scheduled responded 200 in 14.2086 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000B7 | Thread: 11
+
+---
+[2026-06-29 18:08:22.936 INF] HTTP POST /hangfire/stats responded 200 in 5.4039 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000B9 | Thread: 14
+
+---
+[2026-06-29 18:08:24.638 INF] HTTP POST /hangfire/jobs/scheduled/enqueue responded 204 in 326.1913 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000BB | Thread: 14
+
+---
+[2026-06-29 18:08:24.858 INF] HTTP GET /hangfire/jobs/scheduled responded 200 in 188.2764 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000BD | Thread: 14
+
+---
+[2026-06-29 18:08:32.066 INF] HTTP POST /hangfire/stats responded 200 in 2345.9759 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000BF | Thread: 46
+
+---
+[2026-06-29 18:08:52.319 INF] HTTP POST /hangfire/stats responded 200 in 35.4629 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000C1 | Thread: 46
+
+---
+[2026-06-29 18:08:55.319 INF] HTTP POST /hangfire/stats responded 200 in 29.4625 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000C3 | Thread: 15
+
+---
+[2026-06-29 18:08:58.311 INF] HTTP POST /hangfire/stats responded 200 in 25.3837 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000C5 | Thread: 14
+
+---
+[2026-06-29 18:09:01.294 INF] HTTP POST /hangfire/stats responded 200 in 4.9026 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000C7 | Thread: 11
+
+---
+[2026-06-29 18:09:04.301 INF] HTTP POST /hangfire/stats responded 200 in 6.8173 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000C9 | Thread: 14
+
+---
+[2026-06-29 18:09:06.341 INF] HTTP POST /hangfire/stats responded 200 in 4.0646 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000CB | Thread: 11
+
+---
+[2026-06-29 18:09:08.390 INF] HTTP POST /hangfire/stats responded 200 in 8.1492 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000CD | Thread: 11
+
+---
+[2026-06-29 18:09:08.500 INF] HTTP GET /hangfire/jobs/succeeded responded 200 in 69.7334 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000CF | Thread: 11
+
+---
+[2026-06-29 18:09:10.633 INF] HTTP POST /hangfire/stats responded 200 in 24.8501 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000D1 | Thread: 11
+
+---
+[2026-06-29 18:09:12.665 INF] HTTP POST /hangfire/stats responded 200 in 5.5317 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000D3 | Thread: 46
+
+---
+[2026-06-29 18:09:15.339 INF] HTTP POST /hangfire/stats responded 200 in 39.5149 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000D5 | Thread: 46
+
+---
+[2026-06-29 18:09:18.323 INF] HTTP POST /hangfire/stats responded 200 in 27.6589 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000D7 | Thread: 15
+
+---
+[2026-06-29 18:09:21.305 INF] HTTP POST /hangfire/stats responded 200 in 22.0727 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000D9 | Thread: 46
+
+---
+[2026-06-29 18:09:24.300 INF] HTTP POST /hangfire/stats responded 200 in 4.9211 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000DB | Thread: 46
+
+---
+[2026-06-29 18:09:27.302 INF] HTTP POST /hangfire/stats responded 200 in 5.7451 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000DD | Thread: 46
+
+---
+[2026-06-29 18:09:30.295 INF] HTTP POST /hangfire/stats responded 200 in 4.3643 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000DF | Thread: 46
+
+---
+[2026-06-29 18:09:33.295 INF] HTTP POST /hangfire/stats responded 200 in 4.8593 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000E1 | Thread: 11
+
+---
+[2026-06-29 18:09:36.323 INF] HTTP POST /hangfire/stats responded 200 in 32.7693 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000E3 | Thread: 15
+
+---
+[2026-06-29 18:09:39.320 INF] HTTP POST /hangfire/stats responded 200 in 23.3458 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000E5 | Thread: 15
+
+---
+[2026-06-29 18:09:42.296 INF] HTTP POST /hangfire/stats responded 200 in 3.8120 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000E7 | Thread: 15
+
+---
+[2026-06-29 18:09:45.289 INF] HTTP POST /hangfire/stats responded 200 in 3.6723 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000E9 | Thread: 15
+
+---
+[2026-06-29 18:09:48.295 INF] HTTP POST /hangfire/stats responded 200 in 2.8653 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000EB | Thread: 15
+
+---
+[2026-06-29 18:09:51.285 INF] HTTP POST /hangfire/stats responded 200 in 4.1608 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000ED | Thread: 15
+
+---
+[2026-06-29 18:09:54.289 INF] HTTP POST /hangfire/stats responded 200 in 4.3263 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000EF | Thread: 15
+
+---
+[2026-06-29 18:09:57.292 INF] HTTP POST /hangfire/stats responded 200 in 2.9228 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000F1 | Thread: 46
+
+---
+[2026-06-29 18:09:59.309 INF] HTTP POST /hangfire/stats responded 200 in 3.2331 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000F3 | Thread: 11
+
+---
+[2026-06-29 18:10:01.341 INF] HTTP POST /hangfire/stats responded 200 in 3.4901 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000F5 | Thread: 46
+
+---
+[2026-06-29 18:10:03.362 INF] HTTP POST /hangfire/stats responded 200 in 3.6874 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000F7 | Thread: 46
+
+---
+[2026-06-29 18:10:03.828 INF] HTTP GET /hangfire/jobs/scheduled responded 200 in 21.8100 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000F9 | Thread: 11
+
+---
+[2026-06-29 18:10:05.941 INF] HTTP POST /hangfire/stats responded 200 in 3.4500 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000FB | Thread: 11
+
+---
+[2026-06-29 18:10:06.415 INF] HTTP POST /hangfire/jobs/scheduled/enqueue responded 204 in 98.3096 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000FD | Thread: 11
+
+---
+[2026-06-29 18:10:09.884 INF] HTTP GET /hangfire/jobs/scheduled responded 200 in 3409.4117 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000000FF | Thread: 15
+
+---
+[2026-06-29 18:10:09.890 INF] HTTP POST /hangfire/stats responded 200 in 5.7297 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000101 | Thread: 46
+
+---
+[2026-06-29 18:10:12.289 INF] HTTP POST /hangfire/stats responded 200 in 3.3011 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000103 | Thread: 15
+
+---
+[2026-06-29 18:10:15.297 INF] HTTP POST /hangfire/stats responded 200 in 4.1745 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000105 | Thread: 46
+
+---
+[2026-06-29 18:10:18.291 INF] HTTP POST /hangfire/stats responded 200 in 4.4674 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000107 | Thread: 46
+
+---
+[2026-06-29 18:10:21.298 INF] HTTP POST /hangfire/stats responded 200 in 5.3561 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000109 | Thread: 11
+
+---
+[2026-06-29 18:10:24.292 INF] HTTP POST /hangfire/stats responded 200 in 4.9989 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000010B | Thread: 13
+
+---
+[2026-06-29 18:10:27.291 INF] HTTP POST /hangfire/stats responded 200 in 6.3451 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000010D | Thread: 13
+
+---
+[2026-06-29 18:10:30.289 INF] HTTP POST /hangfire/stats responded 200 in 5.2855 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000010F | Thread: 7
+
+---
+[2026-06-29 18:10:33.299 INF] HTTP POST /hangfire/stats responded 200 in 5.0192 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000111 | Thread: 13
+
+---
+[2026-06-29 18:10:36.305 INF] HTTP POST /hangfire/stats responded 200 in 6.6372 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000113 | Thread: 11
+
+---
+[2026-06-29 18:10:39.295 INF] HTTP POST /hangfire/stats responded 200 in 4.9923 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000115 | Thread: 11
+
+---
+[2026-06-29 18:10:42.323 INF] HTTP POST /hangfire/stats responded 200 in 35.7696 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000117 | Thread: 11
+
+---
+[2026-06-29 18:10:45.315 INF] HTTP POST /hangfire/stats responded 200 in 25.1588 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000119 | Thread: 11
+
+---
+[2026-06-29 18:10:48.300 INF] HTTP POST /hangfire/stats responded 200 in 5.7188 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000011B | Thread: 11
+
+---
+[2026-06-29 18:10:51.301 INF] HTTP POST /hangfire/stats responded 200 in 6.2888 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000011D | Thread: 11
+
+---
+[2026-06-29 18:10:54.288 INF] HTTP POST /hangfire/stats responded 200 in 4.4096 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000011F | Thread: 11
+
+---
+[2026-06-29 18:10:57.294 INF] HTTP POST /hangfire/stats responded 200 in 5.4529 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000121 | Thread: 11
+
+---
+[2026-06-29 18:11:00.296 INF] HTTP POST /hangfire/stats responded 200 in 5.9070 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000123 | Thread: 11
+
+---
+[2026-06-29 18:11:03.296 INF] HTTP POST /hangfire/stats responded 200 in 6.2791 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000125 | Thread: 11
+
+---
+[2026-06-29 18:11:06.299 INF] HTTP POST /hangfire/stats responded 200 in 5.2828 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000127 | Thread: 11
+
+---
+[2026-06-29 18:11:09.289 INF] HTTP POST /hangfire/stats responded 200 in 5.2737 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000129 | Thread: 11
+
+---
+[2026-06-29 18:11:12.298 INF] HTTP POST /hangfire/stats responded 200 in 6.0491 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000012B | Thread: 13
+
+---
+[2026-06-29 18:11:14.330 INF] HTTP POST /hangfire/stats responded 200 in 4.2553 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000012D | Thread: 11
+
+---
+[2026-06-29 18:11:14.458 INF] HTTP GET /hangfire/recurring responded 200 in 32.4453 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000012F | Thread: 13
+
+---
+[2026-06-29 18:11:16.588 INF] HTTP POST /hangfire/stats responded 200 in 20.3108 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000131 | Thread: 13
+
+---
+[2026-06-29 18:11:18.607 INF] HTTP POST /hangfire/stats responded 200 in 3.3624 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000133 | Thread: 46
+
+---
+[2026-06-29 18:11:20.627 INF] HTTP POST /hangfire/stats responded 200 in 5.0517 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000135 | Thread: 13
+
+---
+[2026-06-29 18:11:22.659 INF] HTTP POST /hangfire/stats responded 200 in 4.6787 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000137 | Thread: 46
+
+---
+[2026-06-29 18:11:24.679 INF] HTTP POST /hangfire/stats responded 200 in 3.0094 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000139 | Thread: 13
+
+---
+[2026-06-29 18:11:25.236 INF] HTTP POST /hangfire/recurring/trigger responded 204 in 142.1867 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000013B | Thread: 11
+
+---
+[2026-06-29 18:11:27.482 INF] HTTP POST /hangfire/stats responded 200 in 33.0532 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000013F | Thread: 11
+
+---
+[2026-06-29 18:11:27.543 INF] HTTP GET /hangfire/recurring responded 200 in 2167.0614 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000013D | Thread: 46
+
+---
+[2026-06-29 18:11:30.299 INF] HTTP POST /hangfire/stats responded 200 in 3.4494 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000141 | Thread: 46
+
+---
+[2026-06-29 18:11:33.293 INF] HTTP POST /hangfire/stats responded 200 in 5.1910 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000143 | Thread: 13
+
+---
+[2026-06-29 18:11:36.298 INF] HTTP POST /hangfire/stats responded 200 in 3.9667 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000145 | Thread: 13
+
+---
+[2026-06-29 18:11:38.330 INF] HTTP POST /hangfire/stats responded 200 in 7.0595 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000147 | Thread: 13
+
+---
+[2026-06-29 18:11:39.801 INF] HTTP POST /hangfire/recurring/trigger responded 204 in 166.7423 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000149 | Thread: 13
+
+---
+[2026-06-29 18:11:42.569 INF] HTTP POST /hangfire/stats responded 200 in 1021.7221 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000014D | Thread: 46
+
+---
+[2026-06-29 18:12:01.477 INF] HTTP GET /hangfire/recurring responded 200 in 19978.6459 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000014B | Thread: 49
+
+---
+[2026-06-29 18:12:04.318 INF] HTTP POST /hangfire/stats responded 200 in 28.0031 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000014F | Thread: 48
+
+---
+[2026-06-29 18:12:07.317 INF] HTTP POST /hangfire/stats responded 200 in 28.3650 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000151 | Thread: 13
+
+---
+[2026-06-29 18:12:10.313 INF] HTTP POST /hangfire/stats responded 200 in 23.4093 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000153 | Thread: 49
+
+---
+[2026-06-29 18:12:13.291 INF] HTTP POST /hangfire/stats responded 200 in 3.8254 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000155 | Thread: 49
+
+---
+[2026-06-29 18:12:16.293 INF] HTTP POST /hangfire/stats responded 200 in 4.9877 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000157 | Thread: 49
+
+---
+[2026-06-29 18:12:19.295 INF] HTTP POST /hangfire/stats responded 200 in 3.0674 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000159 | Thread: 49
+
+---
+[2026-06-29 18:12:22.289 INF] HTTP POST /hangfire/stats responded 200 in 4.0904 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000015B | Thread: 48
+
+---
+[2026-06-29 18:12:25.291 INF] HTTP POST /hangfire/stats responded 200 in 4.5852 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000015D | Thread: 49
+
+---
+[2026-06-29 18:12:28.292 INF] HTTP POST /hangfire/stats responded 200 in 5.5669 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000015F | Thread: 49
+
+---
+[2026-06-29 18:12:31.292 INF] HTTP POST /hangfire/stats responded 200 in 4.3849 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000161 | Thread: 46
+
+---
+[2026-06-29 18:12:33.411 INF] HTTP POST /hangfire/stats responded 200 in 4.3839 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000163 | Thread: 46
+
+---
+[2026-06-29 18:12:35.461 INF] HTTP POST /hangfire/stats responded 200 in 24.1616 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000165 | Thread: 46
+
+---
+[2026-06-29 18:12:36.047 INF] HTTP POST /hangfire/recurring/trigger responded 204 in 209.1961 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000167 | Thread: 13
+
+---
+[2026-06-29 18:12:39.275 INF] HTTP GET /hangfire/recurring responded 200 in 3200.8090 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000169 | Thread: 49
+
+---
+[2026-06-29 18:12:39.282 INF] HTTP POST /hangfire/stats responded 200 in 75.9722 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000016B | Thread: 46
+
+---
+[2026-06-29 18:12:42.316 INF] HTTP POST /hangfire/stats responded 200 in 20.8671 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000016D | Thread: 48
+
+---
+[2026-06-29 18:12:45.311 INF] HTTP POST /hangfire/stats responded 200 in 25.8941 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000016F | Thread: 46
+
+---
+[2026-06-29 18:12:48.321 INF] HTTP POST /hangfire/stats responded 200 in 31.2099 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000171 | Thread: 52
+
+---
+[2026-06-29 18:12:51.309 INF] HTTP POST /hangfire/stats responded 200 in 24.7480 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000173 | Thread: 46
+
+---
+[2026-06-29 18:12:54.329 INF] HTTP POST /hangfire/stats responded 200 in 46.0038 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000175 | Thread: 49
+
+---
+[2026-06-29 18:12:57.319 INF] HTTP POST /hangfire/stats responded 200 in 36.0070 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000177 | Thread: 46
+
+---
+[2026-06-29 18:13:00.315 INF] HTTP POST /hangfire/stats responded 200 in 25.6539 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000179 | Thread: 52
+
+---
+[2026-06-29 18:13:03.315 INF] HTTP POST /hangfire/stats responded 200 in 33.1443 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000017B | Thread: 49
+
+---
+[2026-06-29 18:13:06.310 INF] HTTP POST /hangfire/stats responded 200 in 25.0096 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000017D | Thread: 49
+
+---
+[2026-06-29 18:13:09.322 INF] HTTP POST /hangfire/stats responded 200 in 32.2573 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000017F | Thread: 52
+
+---
+[2026-06-29 18:13:12.315 INF] HTTP POST /hangfire/stats responded 200 in 26.2810 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000181 | Thread: 48
+
+---
+[2026-06-29 18:13:15.297 INF] HTTP POST /hangfire/stats responded 200 in 5.4361 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000183 | Thread: 48
+
+---
+[2026-06-29 18:13:18.293 INF] HTTP POST /hangfire/stats responded 200 in 4.9563 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000185 | Thread: 49
+
+---
+[2026-06-29 18:13:21.292 INF] HTTP POST /hangfire/stats responded 200 in 5.1733 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000187 | Thread: 48
+
+---
+[2026-06-29 18:13:24.290 INF] HTTP POST /hangfire/stats responded 200 in 4.7159 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000189 | Thread: 52
+
+---
+[2026-06-29 18:13:27.293 INF] HTTP POST /hangfire/stats responded 200 in 5.1405 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000018B | Thread: 48
+
+---
+[2026-06-29 18:13:30.300 INF] HTTP POST /hangfire/stats responded 200 in 5.7194 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000018D | Thread: 49
+
+---
+[2026-06-29 18:13:33.302 INF] HTTP POST /hangfire/stats responded 200 in 4.6544 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000018F | Thread: 49
+
+---
+[2026-06-29 18:13:36.294 INF] HTTP POST /hangfire/stats responded 200 in 5.0680 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000191 | Thread: 52
+
+---
+[2026-06-29 18:13:39.288 INF] HTTP POST /hangfire/stats responded 200 in 3.5943 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000193 | Thread: 52
+
+---
+[2026-06-29 18:13:42.296 INF] HTTP POST /hangfire/stats responded 200 in 4.2254 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000195 | Thread: 48
+
+---
+[2026-06-29 18:13:45.298 INF] HTTP POST /hangfire/stats responded 200 in 3.6579 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000197 | Thread: 52
+
+---
+[2026-06-29 18:13:48.303 INF] HTTP POST /hangfire/stats responded 200 in 4.8363 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:00000199 | Thread: 48
+
+---
+[2026-06-29 18:13:51.294 INF] HTTP POST /hangfire/stats responded 200 in 5.7065 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000019B | Thread: 49
+
+---
+[2026-06-29 18:13:54.298 INF] HTTP POST /hangfire/stats responded 200 in 5.4274 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000019D | Thread: 48
+
+---
+[2026-06-29 18:13:57.287 INF] HTTP POST /hangfire/stats responded 200 in 4.2589 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:0000019F | Thread: 49
+
+---
+[2026-06-29 18:14:00.311 INF] HTTP POST /hangfire/stats responded 200 in 25.3104 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLTUG71SSQ:000001A1 | Thread: 48
+
+---
+[2026-06-29 18:19:22.065 INF] Start installing Hangfire SQL objects...
+    Source: Hangfire.SqlServer.SqlServerObjectsInstaller | RequestId:  | Thread: 5
+
+---
+[2026-06-29 18:19:23.077 INF] Hangfire SQL objects installed.
+    Source: Hangfire.SqlServer.SqlServerObjectsInstaller | RequestId:  | Thread: 5
+
+---
+[2026-06-29 18:19:24.314 INF] Starting Hangfire Server using job storage: 'SQL Server: .@Booking_SaaS'
+    Source: Hangfire.BackgroundJobServer | RequestId:  | Thread: 5
+
+---
+[2026-06-29 18:19:24.321 INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+    Source: Hangfire.BackgroundJobServer | RequestId:  | Thread: 5
+
+---
+[2026-06-29 18:19:24.327 INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+    Source: Hangfire.BackgroundJobServer | RequestId:  | Thread: 5
+
+---
+[2026-06-29 18:19:24.853 INF] Server ahmed:19812:dc7815e8 successfully announced in 455.1269 ms
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:19:24.870 INF] Server ahmed:19812:dc7815e8 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:19:25.014 INF] 1 servers were removed due to timeout
+    Source: Hangfire.Server.ServerWatchdog | RequestId:  | Thread: 19
+
+---
+[2026-06-29 18:19:25.019 INF] Server ahmed:19812:dc7815e8 all the dispatchers started
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:21:07.440 INF] HTTP GET /hangfire/recurring responded 200 in 350.4146 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:00000001 | Thread: 3
+
+---
+[2026-06-29 18:21:07.499 INF] HTTP GET /hangfire/css-dark182301553884751 responded 200 in 18.7353 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:00000005 | Thread: 48
+
+---
+[2026-06-29 18:21:07.503 INF] HTTP GET /hangfire/css18230846036556 responded 200 in 23.0066 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:00000003 | Thread: 51
+
+---
+[2026-06-29 18:21:07.514 INF] HTTP GET /hangfire/js182301986053895 responded 200 in 34.2211 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:00000007 | Thread: 3
+
+---
+[2026-06-29 18:21:09.740 INF] HTTP POST /hangfire/stats responded 200 in 60.5689 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:00000009 | Thread: 50
+
+---
+[2026-06-29 18:21:10.247 INF] HTTP POST /hangfire/recurring/trigger responded 204 in 254.1008 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:0000000B | Thread: 3
+
+---
+[2026-06-29 18:21:10.344 INF] HTTP GET /hangfire/recurring responded 200 in 69.9305 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:0000000D | Thread: 3
+
+---
+[2026-06-29 18:21:10.616 WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+    Source: LuckyPennySoftware.AutoMapper.License | RequestId:  | Thread: 28
+
+---
+[2026-06-29 18:21:12.450 INF] HTTP POST /hangfire/stats responded 200 in 21.0657 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:0000000F | Thread: 50
+
+---
+[2026-06-29 18:21:15.306 INF] HTTP POST /hangfire/stats responded 200 in 20.5110 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:00000011 | Thread: 51
+
+---
+[2026-06-29 18:21:17.362 INF] HTTP POST /hangfire/stats responded 200 in 29.7778 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:00000013 | Thread: 50
+
+---
+[2026-06-29 18:21:18.562 INF] HTTP POST /hangfire/recurring/trigger responded 204 in 66.1189 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:00000015 | Thread: 51
+
+---
+[2026-06-29 18:21:18.638 INF] HTTP GET /hangfire/recurring responded 200 in 56.9367 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:00000017 | Thread: 50
+
+---
+[2026-06-29 18:21:20.736 INF] HTTP POST /hangfire/stats responded 200 in 21.3853 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:00000019 | Thread: 50
+
+---
+[2026-06-29 18:21:22.779 INF] HTTP POST /hangfire/stats responded 200 in 18.7946 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:0000001B | Thread: 50
+
+---
+[2026-06-29 18:21:25.316 INF] HTTP POST /hangfire/stats responded 200 in 22.7307 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:0000001D | Thread: 3
+
+---
+[2026-06-29 18:21:28.015 INF] HTTP POST /hangfire/stats responded 200 in 32.0279 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:0000001F | Thread: 3
+
+---
+[2026-06-29 18:21:29.549 INF] HTTP GET /hangfire/retries responded 200 in 42.2589 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:00000021 | Thread: 50
+
+---
+[2026-06-29 18:21:30.033 INF] HTTP GET /hangfire/recurring responded 200 in 52.6155 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:00000023 | Thread: 48
+
+---
+[2026-06-29 18:21:31.926 INF] HTTP GET /hangfire/jobs/enqueued responded 200 in 58.8147 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:00000025 | Thread: 48
+
+---
+[2026-06-29 18:21:33.144 INF] HTTP GET /hangfire/jobs/succeeded responded 200 in 93.2804 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:00000027 | Thread: 50
+
+---
+[2026-06-29 18:21:34.003 INF] HTTP GET /hangfire/jobs/enqueued responded 200 in 37.0992 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:00000029 | Thread: 48
+
+---
+[2026-06-29 18:21:36.310 INF] HTTP POST /hangfire/stats responded 200 in 21.0376 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:0000002B | Thread: 50
+
+---
+[2026-06-29 18:21:39.324 INF] HTTP POST /hangfire/stats responded 200 in 34.2485 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:0000002D | Thread: 50
+
+---
+[2026-06-29 18:21:42.324 INF] HTTP POST /hangfire/stats responded 200 in 29.4561 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLU85927B7:0000002F | Thread: 50
+
+---
+[2026-06-29 18:21:46.064 INF] Server ahmed:19812:dc7815e8 caught stopping signal...
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 52
+
+---
+[2026-06-29 18:21:46.603 INF] Server ahmed:19812:dc7815e8 caught stopped signal...
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 3
+
+---
+[2026-06-29 18:21:46.906 INF] Server ahmed:19812:dc7815e8 All dispatchers stopped
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:21:46.929 INF] Server ahmed:19812:dc7815e8 successfully reported itself as stopped in 17.1977 ms
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:21:46.935 INF] Server ahmed:19812:dc7815e8 has been stopped in total 866.9007 ms
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:33:48.132 INF] Start installing Hangfire SQL objects...
+    Source: Hangfire.SqlServer.SqlServerObjectsInstaller | RequestId:  | Thread: 5
+
+---
+[2026-06-29 18:33:49.523 INF] Hangfire SQL objects installed.
+    Source: Hangfire.SqlServer.SqlServerObjectsInstaller | RequestId:  | Thread: 5
+
+---
+[2026-06-29 18:33:50.701 INF] Starting Hangfire Server using job storage: 'SQL Server: .@Booking_SaaS'
+    Source: Hangfire.BackgroundJobServer | RequestId:  | Thread: 5
+
+---
+[2026-06-29 18:33:50.709 INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+    Source: Hangfire.BackgroundJobServer | RequestId:  | Thread: 5
+
+---
+[2026-06-29 18:33:50.716 INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+    Source: Hangfire.BackgroundJobServer | RequestId:  | Thread: 5
+
+---
+[2026-06-29 18:33:53.812 INF] Server ahmed:19624:b2c4fe5c successfully announced in 2762.5748 ms
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:33:53.829 INF] Server ahmed:19624:b2c4fe5c is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:33:53.853 INF] Server ahmed:19624:b2c4fe5c all the dispatchers started
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:33:58.414 INF] HTTP GET /hangfire/jobs/scheduled responded 200 in 351.8276 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000001 | Thread: 5
+
+---
+[2026-06-29 18:33:58.538 INF] HTTP GET /hangfire/css-dark182302147289504 responded 200 in 16.0114 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000005 | Thread: 15
+
+---
+[2026-06-29 18:33:58.550 INF] HTTP GET /hangfire/css182301562595685 responded 200 in 28.2426 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000003 | Thread: 16
+
+---
+[2026-06-29 18:33:58.559 INF] HTTP GET /hangfire/js18230371662869 responded 200 in 36.9947 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000007 | Thread: 9
+
+---
+[2026-06-29 18:34:00.861 INF] HTTP POST /hangfire/stats responded 200 in 127.1846 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000009 | Thread: 9
+
+---
+[2026-06-29 18:34:02.951 INF] HTTP POST /hangfire/stats responded 200 in 29.8769 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000000B | Thread: 9
+
+---
+[2026-06-29 18:34:04.990 INF] HTTP POST /hangfire/stats responded 200 in 5.2545 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000000D | Thread: 9
+
+---
+[2026-06-29 18:34:05.675 INF] HTTP GET /hangfire/jobs/failed responded 200 in 435.1526 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000000F | Thread: 9
+
+---
+[2026-06-29 18:34:07.827 INF] HTTP POST /hangfire/stats responded 200 in 3.6670 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000011 | Thread: 5
+
+---
+[2026-06-29 18:34:09.861 INF] HTTP POST /hangfire/stats responded 200 in 4.3430 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000013 | Thread: 9
+
+---
+[2026-06-29 18:34:12.333 INF] HTTP POST /hangfire/stats responded 200 in 4.1119 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000017 | Thread: 16
+
+---
+[2026-06-29 18:34:12.934 INF] HTTP POST /hangfire/jobs/failed/delete responded 204 in 607.2436 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000015 | Thread: 5
+
+---
+[2026-06-29 18:34:13.018 INF] HTTP GET /hangfire/jobs/failed responded 200 in 32.8637 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000019 | Thread: 5
+
+---
+[2026-06-29 18:34:14.516 INF] HTTP GET /hangfire/jobs/deleted responded 200 in 29.5318 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000001B | Thread: 16
+
+---
+[2026-06-29 18:34:16.576 INF] HTTP POST /hangfire/stats responded 200 in 4.8494 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000001D | Thread: 5
+
+---
+[2026-06-29 18:34:18.618 INF] HTTP POST /hangfire/stats responded 200 in 3.7505 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000001F | Thread: 5
+
+---
+[2026-06-29 18:34:19.808 INF] HTTP GET /hangfire/jobs/succeeded responded 200 in 60.9020 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000021 | Thread: 5
+
+---
+[2026-06-29 18:34:21.870 INF] HTTP POST /hangfire/stats responded 200 in 3.9726 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000023 | Thread: 5
+
+---
+[2026-06-29 18:34:23.907 INF] HTTP POST /hangfire/stats responded 200 in 4.6083 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000025 | Thread: 5
+
+---
+[2026-06-29 18:34:25.951 INF] HTTP POST /hangfire/stats responded 200 in 5.2102 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000027 | Thread: 5
+
+---
+[2026-06-29 18:34:27.845 INF] HTTP GET /hangfire/jobs/details/4 responded 200 in 94.4683 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000029 | Thread: 5
+
+---
+[2026-06-29 18:34:29.948 INF] HTTP POST /hangfire/stats responded 200 in 28.0562 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000002B | Thread: 9
+
+---
+[2026-06-29 18:34:32.012 INF] HTTP POST /hangfire/stats responded 200 in 36.8238 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000002D | Thread: 5
+
+---
+[2026-06-29 18:34:32.167 INF] HTTP POST /hangfire/stats responded 200 in 32.3407 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000002F | Thread: 5
+
+---
+[2026-06-29 18:34:34.231 INF] HTTP POST /hangfire/stats responded 200 in 32.3864 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000031 | Thread: 9
+
+---
+[2026-06-29 18:34:36.280 INF] HTTP POST /hangfire/stats responded 200 in 27.6919 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000033 | Thread: 5
+
+---
+[2026-06-29 18:34:36.607 INF] HTTP POST /hangfire/jobs/succeeded/requeue responded 204 in 112.5771 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000035 | Thread: 5
+
+---
+[2026-06-29 18:34:36.693 INF] HTTP GET /hangfire/jobs/succeeded responded 200 in 52.4121 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000037 | Thread: 5
+
+---
+[2026-06-29 18:34:42.582 WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+    Source: LuckyPennySoftware.AutoMapper.License | RequestId:  | Thread: 37
+
+---
+[2026-06-29 18:34:43.173 INF] HTTP GET /hangfire/jobs/processing responded 200 in 143.6183 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000039 | Thread: 16
+
+---
+[2026-06-29 18:34:51.227 INF] HTTP POST /hangfire/stats responded 200 in 560.6128 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000003B | Thread: 48
+
+---
+[2026-06-29 18:35:02.339 INF] HTTP POST /hangfire/stats responded 200 in 28.4723 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000003D | Thread: 9
+
+---
+[2026-06-29 18:35:06.837 INF] HTTP POST /hangfire/stats responded 200 in 28.3399 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000003F | Thread: 48
+
+---
+[2026-06-29 18:35:08.896 INF] HTTP POST /hangfire/stats responded 200 in 38.5287 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000041 | Thread: 5
+
+---
+[2026-06-29 18:35:11.323 INF] HTTP POST /hangfire/stats responded 200 in 28.6477 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000043 | Thread: 5
+
+---
+[2026-06-29 18:35:13.363 INF] HTTP POST /hangfire/stats responded 200 in 22.8304 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000045 | Thread: 9
+
+---
+[2026-06-29 18:35:13.957 INF] HTTP GET /hangfire/jobs/enqueued responded 200 in 49.4107 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000047 | Thread: 16
+
+---
+[2026-06-29 18:35:14.786 INF] HTTP GET /hangfire/jobs/scheduled responded 200 in 47.9524 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000049 | Thread: 5
+
+---
+[2026-06-29 18:35:16.083 INF] HTTP GET /hangfire/recurring responded 200 in 132.7506 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000004B | Thread: 16
+
+---
+[2026-06-29 18:35:18.313 INF] HTTP POST /hangfire/stats responded 200 in 30.0627 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000004D | Thread: 16
+
+---
+[2026-06-29 18:35:21.308 INF] HTTP POST /hangfire/stats responded 200 in 28.6405 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000004F | Thread: 5
+
+---
+[2026-06-29 18:35:24.328 INF] HTTP POST /hangfire/stats responded 200 in 36.4203 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000051 | Thread: 5
+
+---
+[2026-06-29 18:35:25.108 INF] HTTP POST /api/Authentication/login responded 200 in 1050.7281 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14EM0:00000001 | Thread: 16
+
+---
+[2026-06-29 18:35:27.320 INF] HTTP POST /hangfire/stats responded 200 in 32.9586 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000053 | Thread: 16
+
+---
+[2026-06-29 18:35:28.647 INF] HTTP DELETE /api/resources/1/schedules/3 responded 200 in 519.1351 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14EM0:00000002 | Thread: 5
+
+---
+[2026-06-29 18:35:30.309 INF] HTTP POST /hangfire/stats responded 200 in 23.0505 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000055 | Thread: 16
+
+---
+[2026-06-29 18:35:32.414 INF] HTTP POST /hangfire/stats responded 200 in 87.5525 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000057 | Thread: 16
+
+---
+[2026-06-29 18:35:35.723 INF] HTTP GET /hangfire/jobs/enqueued responded 200 in 962.7034 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000059 | Thread: 5
+
+---
+[2026-06-29 18:35:35.732 INF] HTTP POST /hangfire/stats responded 200 in 967.7237 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000005B | Thread: 16
+
+---
+[2026-06-29 18:35:38.881 INF] HTTP POST /hangfire/stats responded 200 in 26.8539 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000005D | Thread: 9
+
+---
+[2026-06-29 18:35:39.342 INF] HTTP GET /hangfire/jobs/deleted responded 200 in 17.5859 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000005F | Thread: 9
+
+---
+[2026-06-29 18:35:42.453 INF] HTTP POST /hangfire/stats responded 200 in 4.1392 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000061 | Thread: 9
+
+---
+[2026-06-29 18:35:44.490 INF] HTTP POST /hangfire/stats responded 200 in 3.0244 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000063 | Thread: 16
+
+---
+[2026-06-29 18:35:47.295 INF] HTTP POST /hangfire/stats responded 200 in 3.5651 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000065 | Thread: 5
+
+---
+[2026-06-29 18:35:49.336 INF] HTTP POST /hangfire/stats responded 200 in 2.3026 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000067 | Thread: 5
+
+---
+[2026-06-29 18:35:52.295 INF] HTTP POST /hangfire/stats responded 200 in 2.3511 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000069 | Thread: 9
+
+---
+[2026-06-29 18:35:52.606 INF] HTTP DELETE /api/resources/1/schedules/4 responded 200 in 179.0555 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14EM0:00000003 | Thread: 9
+
+---
+[2026-06-29 18:35:54.345 INF] HTTP POST /hangfire/stats responded 200 in 33.1061 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000006B | Thread: 9
+
+---
+[2026-06-29 18:35:55.687 INF] HTTP GET /hangfire/recurring responded 200 in 43.9105 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000006D | Thread: 16
+
+---
+[2026-06-29 18:35:57.578 INF] HTTP GET /hangfire/jobs/enqueued responded 200 in 35.7184 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000006F | Thread: 16
+
+---
+[2026-06-29 18:35:59.639 INF] HTTP GET /hangfire/retries responded 200 in 32.3073 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000071 | Thread: 16
+
+---
+[2026-06-29 18:35:59.639 INF] HTTP POST /hangfire/stats responded 200 in 2.2539 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000073 | Thread: 9
+
+---
+[2026-06-29 18:36:00.182 INF] HTTP GET /hangfire/recurring responded 200 in 32.2023 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000075 | Thread: 9
+
+---
+[2026-06-29 18:36:01.196 INF] HTTP GET /hangfire/recurring responded 200 in 37.2715 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000077 | Thread: 16
+
+---
+[2026-06-29 18:36:02.409 INF] HTTP GET /hangfire/jobs/enqueued responded 200 in 39.7653 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000079 | Thread: 16
+
+---
+[2026-06-29 18:36:03.541 INF] HTTP GET /hangfire/ responded 200 in 462.7505 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000007B | Thread: 16
+
+---
+[2026-06-29 18:36:05.796 INF] HTTP POST /hangfire/stats responded 200 in 129.1773 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000007D | Thread: 16
+
+---
+[2026-06-29 18:36:07.424 INF] HTTP GET /hangfire/jobs/enqueued responded 200 in 27.8447 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:0000007F | Thread: 16
+
+---
+[2026-06-29 18:36:09.503 INF] HTTP POST /hangfire/stats responded 200 in 3.6700 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000081 | Thread: 9
+
+---
+[2026-06-29 18:36:12.305 INF] HTTP POST /hangfire/stats responded 200 in 22.5184 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000083 | Thread: 16
+
+---
+[2026-06-29 18:36:15.303 INF] HTTP POST /hangfire/stats responded 200 in 20.4729 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000085 | Thread: 9
+
+---
+[2026-06-29 18:36:18.316 INF] HTTP POST /hangfire/stats responded 200 in 24.0964 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000087 | Thread: 9
+
+---
+[2026-06-29 18:36:20.379 INF] HTTP POST /hangfire/stats responded 200 in 29.9813 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUFB14ELU:00000089 | Thread: 9
+
+---
+[2026-06-29 18:36:24.463 INF] Server ahmed:19624:b2c4fe5c caught stopping signal...
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 47
+
+---
+[2026-06-29 18:36:25.004 INF] Server ahmed:19624:b2c4fe5c caught stopped signal...
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 16
+
+---
+[2026-06-29 18:36:25.020 INF] Server ahmed:19624:b2c4fe5c All dispatchers stopped
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:36:25.031 INF] Server ahmed:19624:b2c4fe5c successfully reported itself as stopped in 6.4497 ms
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:36:25.034 INF] Server ahmed:19624:b2c4fe5c has been stopped in total 562.5327 ms
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:50:28.674 INF] Start installing Hangfire SQL objects...
+    Source: Hangfire.SqlServer.SqlServerObjectsInstaller | RequestId:  | Thread: 9
+
+---
+[2026-06-29 18:50:29.450 INF] Hangfire SQL objects installed.
+    Source: Hangfire.SqlServer.SqlServerObjectsInstaller | RequestId:  | Thread: 9
+
+---
+[2026-06-29 18:50:29.907 INF] Starting Hangfire Server using job storage: 'SQL Server: .@Booking_SaaS'
+    Source: Hangfire.BackgroundJobServer | RequestId:  | Thread: 9
+
+---
+[2026-06-29 18:50:29.911 INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+    Source: Hangfire.BackgroundJobServer | RequestId:  | Thread: 9
+
+---
+[2026-06-29 18:50:29.914 INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+    Source: Hangfire.BackgroundJobServer | RequestId:  | Thread: 9
+
+---
+[2026-06-29 18:50:30.105 INF] Server ahmed:18464:10543359 successfully announced in 166.0698 ms
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:50:30.111 INF] Server ahmed:18464:10543359 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:50:30.126 INF] Server ahmed:18464:10543359 all the dispatchers started
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:51:27.237 WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+    Source: LuckyPennySoftware.AutoMapper.License | RequestId: 0HNMLUOUS0P0R:00000001 | Thread: 47
+
+---
+[2026-06-29 18:51:29.633 INF] HTTP POST /api/Authentication/login responded 200 in 18501.4519 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0R:00000001 | Thread: 49
+
+---
+[2026-06-29 18:51:44.043 INF] HTTP GET /hangfire/recurring responded 200 in 279.5932 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000001 | Thread: 47
+
+---
+[2026-06-29 18:51:44.061 INF] HTTP POST /api/resources/1/schedules responded 200 in 3179.6864 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0R:00000002 | Thread: 49
+
+---
+[2026-06-29 18:51:44.823 INF] HTTP GET /hangfire/recurring responded 200 in 100.4250 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000003 | Thread: 12
+
+---
+[2026-06-29 18:51:44.942 INF] HTTP GET /hangfire/css-dark182302033984284 responded 200 in 25.3135 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000007 | Thread: 51
+
+---
+[2026-06-29 18:51:44.944 INF] HTTP GET /hangfire/css182301860890014 responded 200 in 29.1879 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000005 | Thread: 50
+
+---
+[2026-06-29 18:51:44.968 INF] HTTP GET /hangfire/js18230161683992 responded 200 in 49.8393 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000009 | Thread: 12
+
+---
+[2026-06-29 18:51:47.252 INF] HTTP POST /hangfire/stats responded 200 in 83.6610 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000000B | Thread: 50
+
+---
+[2026-06-29 18:51:48.078 INF] HTTP GET /hangfire/jobs/enqueued responded 200 in 73.6224 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000000D | Thread: 49
+
+---
+[2026-06-29 18:51:49.422 INF] HTTP GET /hangfire/jobs/scheduled responded 200 in 291.0875 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000000F | Thread: 49
+
+---
+[2026-06-29 18:51:51.561 INF] HTTP POST /hangfire/stats responded 200 in 33.7267 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000011 | Thread: 12
+
+---
+[2026-06-29 18:51:53.625 INF] HTTP POST /hangfire/stats responded 200 in 35.1612 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000013 | Thread: 49
+
+---
+[2026-06-29 18:51:55.679 INF] HTTP POST /hangfire/stats responded 200 in 26.3032 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000015 | Thread: 49
+
+---
+[2026-06-29 18:51:57.730 INF] HTTP POST /hangfire/stats responded 200 in 27.4837 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000017 | Thread: 49
+
+---
+[2026-06-29 18:51:59.941 INF] HTTP POST /hangfire/stats responded 200 in 25.1471 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000019 | Thread: 49
+
+---
+[2026-06-29 18:52:02.297 INF] HTTP POST /hangfire/stats responded 200 in 3.1343 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000001B | Thread: 49
+
+---
+[2026-06-29 18:52:05.290 INF] HTTP POST /hangfire/stats responded 200 in 3.9035 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000001D | Thread: 49
+
+---
+[2026-06-29 18:52:08.511 INF] HTTP POST /hangfire/stats responded 200 in 2.7453 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000001F | Thread: 50
+
+---
+[2026-06-29 18:52:11.296 INF] HTTP POST /hangfire/stats responded 200 in 3.3779 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000021 | Thread: 49
+
+---
+[2026-06-29 18:52:14.320 INF] HTTP POST /hangfire/stats responded 200 in 25.7061 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000023 | Thread: 49
+
+---
+[2026-06-29 18:52:17.325 INF] HTTP POST /hangfire/stats responded 200 in 33.0470 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000025 | Thread: 49
+
+---
+[2026-06-29 18:52:19.231 INF] HTTP PUT /api/resources/1/schedules/5 responded 200 in 624.6913 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0R:00000003 | Thread: 12
+
+---
+[2026-06-29 18:52:20.317 INF] HTTP POST /hangfire/stats responded 200 in 21.7903 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000027 | Thread: 50
+
+---
+[2026-06-29 18:52:22.384 INF] HTTP POST /hangfire/stats responded 200 in 39.2311 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000029 | Thread: 49
+
+---
+[2026-06-29 18:52:24.428 INF] HTTP POST /hangfire/stats responded 200 in 27.5655 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000002B | Thread: 50
+
+---
+[2026-06-29 18:52:26.469 INF] HTTP POST /hangfire/stats responded 200 in 25.1002 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000002D | Thread: 49
+
+---
+[2026-06-29 18:52:28.536 INF] HTTP POST /hangfire/stats responded 200 in 36.6902 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000002F | Thread: 50
+
+---
+[2026-06-29 18:52:28.827 INF] HTTP GET /hangfire/jobs/scheduled responded 200 in 18.0855 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000031 | Thread: 50
+
+---
+[2026-06-29 18:52:30.907 INF] HTTP POST /hangfire/stats responded 200 in 19.1475 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000033 | Thread: 12
+
+---
+[2026-06-29 18:52:32.962 INF] HTTP POST /hangfire/stats responded 200 in 32.2196 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000035 | Thread: 12
+
+---
+[2026-06-29 18:52:35.027 INF] HTTP POST /hangfire/stats responded 200 in 46.3574 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000037 | Thread: 49
+
+---
+[2026-06-29 18:52:37.070 INF] HTTP POST /hangfire/stats responded 200 in 24.6927 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000039 | Thread: 49
+
+---
+[2026-06-29 18:52:38.497 INF] HTTP GET /hangfire/jobs/deleted responded 200 in 70.3769 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000003B | Thread: 12
+
+---
+[2026-06-29 18:52:40.132 INF] HTTP GET /hangfire/jobs/scheduled responded 200 in 87.5116 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000003D | Thread: 50
+
+---
+[2026-06-29 18:52:42.219 INF] HTTP POST /hangfire/stats responded 200 in 29.3259 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000003F | Thread: 50
+
+---
+[2026-06-29 18:52:43.735 INF] HTTP GET /hangfire/recurring responded 200 in 36.8829 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000041 | Thread: 50
+
+---
+[2026-06-29 18:52:46.313 INF] HTTP POST /hangfire/stats responded 200 in 26.2237 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000043 | Thread: 49
+
+---
+[2026-06-29 18:52:49.324 INF] HTTP POST /hangfire/stats responded 200 in 37.4777 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000045 | Thread: 50
+
+---
+[2026-06-29 18:52:52.310 INF] HTTP POST /hangfire/stats responded 200 in 31.5886 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000047 | Thread: 50
+
+---
+[2026-06-29 18:52:55.159 INF] HTTP DELETE /api/resources/1/schedules/5 responded 200 in 249.3661 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0R:00000004 | Thread: 50
+
+---
+[2026-06-29 18:52:55.320 INF] HTTP POST /hangfire/stats responded 200 in 29.4167 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000049 | Thread: 50
+
+---
+[2026-06-29 18:52:57.375 INF] HTTP POST /hangfire/stats responded 200 in 33.9608 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000004B | Thread: 50
+
+---
+[2026-06-29 18:53:00.306 INF] HTTP POST /hangfire/stats responded 200 in 20.8689 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000004D | Thread: 50
+
+---
+[2026-06-29 18:53:03.313 INF] HTTP POST /hangfire/stats responded 200 in 28.6234 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000004F | Thread: 49
+
+---
+[2026-06-29 18:53:06.293 INF] HTTP POST /api/resources/1/schedules responded 200 in 162.7502 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0R:00000005 | Thread: 49
+
+---
+[2026-06-29 18:53:06.316 INF] HTTP POST /hangfire/stats responded 200 in 30.8585 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000051 | Thread: 50
+
+---
+[2026-06-29 18:53:09.322 INF] HTTP POST /hangfire/stats responded 200 in 25.3778 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000053 | Thread: 50
+
+---
+[2026-06-29 18:53:12.308 INF] HTTP POST /hangfire/stats responded 200 in 21.9587 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000055 | Thread: 50
+
+---
+[2026-06-29 18:53:15.291 INF] HTTP POST /hangfire/stats responded 200 in 2.2986 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000057 | Thread: 12
+
+---
+[2026-06-29 18:53:18.300 INF] HTTP POST /hangfire/stats responded 200 in 3.1662 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000059 | Thread: 49
+
+---
+[2026-06-29 18:53:20.786 INF] HTTP POST /hangfire/stats responded 200 in 3.9609 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000005B | Thread: 49
+
+---
+[2026-06-29 18:53:22.823 INF] HTTP POST /hangfire/stats responded 200 in 3.5709 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000005D | Thread: 12
+
+---
+[2026-06-29 18:53:22.995 INF] HTTP GET /hangfire/recurring responded 200 in 24.7923 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:0000005F | Thread: 49
+
+---
+[2026-06-29 18:53:25.109 INF] HTTP POST /hangfire/stats responded 200 in 23.3654 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0S:00000061 | Thread: 12
+
+---
+[2026-06-29 18:53:27.161 INF] HTTP POST /hangfire/stats responded 200 in 20.4461 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:00000001 | Thread: 49
+
+---
+[2026-06-29 18:53:29.298 INF] HTTP POST /hangfire/stats responded 200 in 3.4839 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:00000003 | Thread: 49
+
+---
+[2026-06-29 18:53:32.298 INF] HTTP POST /hangfire/stats responded 200 in 3.4263 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:00000005 | Thread: 49
+
+---
+[2026-06-29 18:53:35.293 INF] HTTP POST /hangfire/stats responded 200 in 4.9684 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:00000007 | Thread: 50
+
+---
+[2026-06-29 18:53:38.291 INF] HTTP POST /hangfire/stats responded 200 in 3.6793 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:00000009 | Thread: 49
+
+---
+[2026-06-29 18:53:41.299 INF] HTTP POST /hangfire/stats responded 200 in 3.4094 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:0000000B | Thread: 12
+
+---
+[2026-06-29 18:53:44.321 INF] HTTP POST /hangfire/stats responded 200 in 32.8175 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:0000000D | Thread: 49
+
+---
+[2026-06-29 18:53:46.091 INF] HTTP PUT /api/resources/1/schedules/6 responded 200 in 310.9957 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0R:00000006 | Thread: 49
+
+---
+[2026-06-29 18:53:47.328 INF] HTTP POST /hangfire/stats responded 200 in 31.0833 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:0000000F | Thread: 50
+
+---
+[2026-06-29 18:53:48.974 INF] HTTP GET /hangfire/recurring responded 200 in 17.9014 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:00000011 | Thread: 50
+
+---
+[2026-06-29 18:53:51.049 INF] HTTP POST /hangfire/stats responded 200 in 3.7900 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:00000013 | Thread: 50
+
+---
+[2026-06-29 18:53:53.291 INF] HTTP POST /hangfire/stats responded 200 in 3.5367 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:00000015 | Thread: 49
+
+---
+[2026-06-29 18:53:56.293 INF] HTTP POST /hangfire/stats responded 200 in 3.3957 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:00000017 | Thread: 50
+
+---
+[2026-06-29 18:53:58.113 INF] HTTP DELETE /api/resources/1/schedules/6 responded 200 in 72.3010 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0R:00000007 | Thread: 50
+
+---
+[2026-06-29 18:53:59.319 INF] HTTP POST /hangfire/stats responded 200 in 25.8758 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:00000019 | Thread: 50
+
+---
+[2026-06-29 18:54:00.710 INF] HTTP GET /hangfire/recurring responded 200 in 38.4752 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:0000001B | Thread: 49
+
+---
+[2026-06-29 18:54:02.469 ERR] Request failed: GET /
+    Source: Booking_SaaS.API.ExceptionHandler.GlobalExceptionHandler | RequestId: 0HNMLUOUS0P0T:0000001D | Thread: 50
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Booking_SaaS.API.Middlewares.TenantResolutionMiddleware.ResolveTenantId(HttpContext context) in D:\Backend\Projects\Booking_SaaS\Booking_SaaS.API\Middlewares\TenantResolutionMiddleware.cs:line 33
+   at Booking_SaaS.API.Middlewares.TenantResolutionMiddleware.InvokeAsync(HttpContext context, ITenantResolver tenantResolver) in D:\Backend\Projects\Booking_SaaS\Booking_SaaS.API\Middlewares\TenantResolutionMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+
+---
+[2026-06-29 18:54:02.504 ERR] HTTP GET / responded 500 in 46.4604 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:0000001D | Thread: 50
+
+---
+[2026-06-29 18:54:02.612 ERR] Request failed: GET /favicon.ico
+    Source: Booking_SaaS.API.ExceptionHandler.GlobalExceptionHandler | RequestId: 0HNMLUOUS0P0T:0000001F | Thread: 50
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Booking_SaaS.API.Middlewares.TenantResolutionMiddleware.ResolveTenantId(HttpContext context) in D:\Backend\Projects\Booking_SaaS\Booking_SaaS.API\Middlewares\TenantResolutionMiddleware.cs:line 33
+   at Booking_SaaS.API.Middlewares.TenantResolutionMiddleware.InvokeAsync(HttpContext context, ITenantResolver tenantResolver) in D:\Backend\Projects\Booking_SaaS\Booking_SaaS.API\Middlewares\TenantResolutionMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+
+---
+[2026-06-29 18:54:02.625 ERR] HTTP GET /favicon.ico responded 500 in 16.9013 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:0000001F | Thread: 50
+
+---
+[2026-06-29 18:54:04.778 INF] HTTP POST /hangfire/stats responded 200 in 22.3297 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:00000021 | Thread: 50
+
+---
+[2026-06-29 18:54:07.291 INF] HTTP POST /hangfire/stats responded 200 in 1.9621 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:00000023 | Thread: 49
+
+---
+[2026-06-29 18:54:10.286 INF] HTTP POST /hangfire/stats responded 200 in 2.5889 ms
+    Source: Serilog.AspNetCore.RequestLoggingMiddleware | RequestId: 0HNMLUOUS0P0T:00000025 | Thread: 49
+
+---
+[2026-06-29 18:54:11.595 INF] Server ahmed:18464:10543359 caught stopping signal...
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 51
+
+---
+[2026-06-29 18:54:12.117 INF] Server ahmed:18464:10543359 caught stopped signal...
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 47
+
+---
+[2026-06-29 18:54:12.569 INF] Server ahmed:18464:10543359 All dispatchers stopped
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:54:12.577 INF] Server ahmed:18464:10543359 successfully reported itself as stopped in 3.5938 ms
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
+[2026-06-29 18:54:12.578 INF] Server ahmed:18464:10543359 has been stopped in total 975.251 ms
+    Source: Hangfire.Server.BackgroundServerProcess | RequestId:  | Thread: 17
+
+---
