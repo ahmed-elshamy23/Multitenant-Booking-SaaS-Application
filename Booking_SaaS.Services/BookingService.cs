@@ -61,12 +61,12 @@ internal class BookingService : IBookingService
         return paginatedDto;
     }
 
-    public async Task<Result<int>> GetScheduleIdAsync(int bookingId, int userId)
+    public async Task<Result<BookingDto>> GetByIdAsync(int bookingId, int userId)
     {
         var booking = await _repo.GetByIdAsync(bookingId);
         if (booking == null || booking.UserId != userId)
             return Error.Validation.NotFound(nameof(Booking));
-        return booking.ScheduleId ?? 0;
+        return _mapper.Map<Booking, BookingDto>(booking);
     }
 
     public async Task<Result<int>> AddAsync(BookingAddDto bookingDto, int scheduleId, int userId)

@@ -34,7 +34,8 @@ This solution adheres to **Onion Architecture** principles, divided into five ma
 
 ### 3. High-Reliability Booking Engine
 * **Transactional Integrity:** Strict unique constraints and parent-locking ensure overlapping bookings or double-bookings are mathematically impossible.
-* **Idempotency Gateway:** A custom `[ServiceFilter(typeof(IdempotencyFilter))]` caches successful API responses in **Redis**. 
+* **Schedule Capacity Caching:** Transitioning schedule availability checks from SQL aggregates (`COUNT()`) to atomic Redis operations (`INCR`/`DECR`) for sub-millisecond reads.
+* **Idempotency Gateway:** A custom `IdempotencyFilter` caches successful API responses in **Redis**. 
     * Safeguards the database against network retries.
     * Bypasses heavy pessimistic locks by returning the cached JSON payload (HTTP Status Code + Body) on duplicate requests.
     * Supports `POST` and complex `PUT` endpoints (like `Schedule_Update` with side effects).
@@ -42,7 +43,6 @@ This solution adheres to **Onion Architecture** principles, divided into five ma
 ## 🗺 What's Next?
 
 * **Owner Role:** Implementation of a centralized TenantController to allow Super Admins to create, suspend, and assign admins to tenants.
-* **Resource Capacity Caching:** Transitioning schedule availability checks from SQL aggregates (`COUNT()`) to atomic Redis operations (`INCR`/`DECR`) for sub-millisecond reads.
 * **Payment Gateway Integration:** Handling booking payments and issuing refunds.
 * **Waitlist & Notifications:** Automated queuing and notification triggers for highly contested schedules.
 * **Recurrent Bookings:** Support for complex, repeating schedule definitions.

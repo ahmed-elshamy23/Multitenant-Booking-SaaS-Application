@@ -36,8 +36,21 @@ public class CachingRepository : ICachingRepository
         return await _database.StringGetAsync(key);
     }
 
-    public async Task SetAsync(string key, string value)
+    public async Task SetAsync(string key, string value, bool hasExpiration = true)
     {
-        await _database.StringSetAsync(key, value, TimeSpan.FromMinutes(_options.DurationInMinutes));
+        if (hasExpiration)
+            await _database.StringSetAsync(key, value, TimeSpan.FromMinutes(_options.DurationInMinutes));
+        else
+            await _database.StringSetAsync(key, value);
+    }
+
+    public async Task<long> IncrementByAsync(string key, int value)
+    {
+        return await _database.StringIncrementAsync(key, value);
+    }
+
+    public async Task<long> DecrementByAsync(string key, int value)
+    {
+        return await _database.StringDecrementAsync(key, value);
     }
 }

@@ -61,6 +61,16 @@ internal class ScheduleService : IScheduleService
         return paginatedDto;
     }
 
+    public async Task<Result<ScheduleResultDto>> GetByIdAsync(int scheduleId,
+        CancellationToken cancellationToken = default)
+    {
+        var schedule = await _repo.GetByIdAsync(scheduleId, cancellationToken);
+        if (schedule == null)
+            return Error.Validation.NotFound(nameof(Schedule));
+
+        return _mapper.Map<ScheduleResultDto>(schedule);
+    }
+
     public async Task<Result<ScheduleResultDto>> GetAndLockByIdAsync(int scheduleId,
         CancellationToken cancellationToken = default)
     {

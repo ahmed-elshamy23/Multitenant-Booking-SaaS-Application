@@ -17,8 +17,18 @@ public class CachingService : ICachingService
         return await _repo.GetAsync(key);
     }
 
-    public async Task SetAsync(string key, string value)
+    public async Task SetAsync(string key, string value, bool hasExpiration = true)
     {
-        await _repo.SetAsync(key, value);
+        await _repo.SetAsync(key, value, hasExpiration);
+    }
+
+    public async Task<long> IncrementByAsync(string key, int value)
+    {
+        return await _repo.IncrementByAsync(key, value);
+    }
+
+    public async Task<long> DecrementByAsync(string key, int value)
+    {
+        return await _repo.DecrementByAsync(key, value);
     }
 }

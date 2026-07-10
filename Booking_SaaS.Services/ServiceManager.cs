@@ -35,7 +35,8 @@ public class ServiceManager : IServiceManager
         IValidator<ResourceFilterDto> resourceFilterValidator, IValidator<ScheduleFilterDto> scheduleFilterValidator,
         IValidator<PaginatedDto<ScheduleResultDto>> schedulePaginationValidator,
         IValidator<ScheduleAddDto> scheduleValidator, IValidator<BookingFilterDto> bookingFilterValidator,
-        IValidator<PaginatedDto<BookingDto>> bookingPaginationValidator, IValidator<BookingAddDto> bookingValidator)
+        IValidator<PaginatedDto<BookingDto>> bookingPaginationValidator, IValidator<BookingAddDto> bookingValidator,
+        ICachingService cachingService)
     {
         var emailService = new Lazy<IEmailService>(() => new EmailService(emailOptions));
 
@@ -65,7 +66,7 @@ public class ServiceManager : IServiceManager
                 emailService.Value, domainOptions, unitOfWork));
 
         _bookingOrchestrator = new Lazy<IBookingOrchestrator>(() => new BookingOrchestrator(_tenantService.Value,
-            tenantResolver, scheduleService.Value, bookingService.Value, unitOfWork, bookingValidator));
+            tenantResolver, scheduleService.Value, bookingService.Value, unitOfWork, bookingValidator, cachingService));
     }
 
     public ITenantService TenantService => _tenantService.Value;

@@ -43,7 +43,10 @@ public class AuthenticationOrchestrator : IAuthenticationOrchestrator
         {
             var result = await _authenticationService.LoginAsync(loginDto);
             if (!result.IsSuccess)
+            {
                 await _unitOfWork.RollbackAsync(cancellationToken);
+                return result.Error!;
+            }
 
             await _unitOfWork.CommitAsync(cancellationToken);
             return result;

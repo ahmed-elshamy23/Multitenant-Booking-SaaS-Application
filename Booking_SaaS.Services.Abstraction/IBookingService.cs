@@ -9,7 +9,7 @@ public interface IBookingService
     Task<Result<PaginatedDto<BookingDto>>> GetAllAsync(BookingFilterDto filterDto, int userId,
         CancellationToken cancellationToken = default);
 
-    Task<Result<int>> GetScheduleIdAsync(int bookingId, int userId);
+    Task<Result<BookingDto>> GetByIdAsync(int bookingId, int userId);
 
     Task<Result<int>> AddAsync(BookingAddDto bookingDto, int scheduleId, int userId);
     Task<Result> CancelAsync(int scheduleId, int userId);
