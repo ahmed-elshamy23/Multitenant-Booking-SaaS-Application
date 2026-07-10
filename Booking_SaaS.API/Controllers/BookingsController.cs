@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using Booking_SaaS.API.ActionFilters;
+using Booking_SaaS.API.Attributes;
 using Booking_SaaS.Domain.Results;
 using Booking_SaaS.Services.Abstraction;
 using Booking_SaaS.Services.Abstraction.DTOs;
@@ -35,6 +36,7 @@ public class BookingsController : ApiController
     [HttpPost("schedules/{scheduleId:int}/bookings")]
     [SwaggerOperation(OperationId = "Booking_Add")]
     [ServiceFilter(typeof(IdempotencyFilter))]
+    [RequireIdempotencyKey]
     public async Task<ActionResult<Result<int>>> AddAsync(BookingAddDto bookingDto, int scheduleId)
     {
         var userId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
@@ -45,6 +47,7 @@ public class BookingsController : ApiController
     [HttpPut("bookings/{bookingId:int}/cancel")]
     [SwaggerOperation(OperationId = "Booking_Cancel")]
     [ServiceFilter(typeof(IdempotencyFilter))]
+    [RequireIdempotencyKey]
     public async Task<ActionResult<Result>> CancelAsync(int bookingId)
     {
         var userId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;

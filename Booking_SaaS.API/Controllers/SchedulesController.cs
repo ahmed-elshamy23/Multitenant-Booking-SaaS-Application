@@ -1,4 +1,5 @@
 using Booking_SaaS.API.ActionFilters;
+using Booking_SaaS.API.Attributes;
 using Booking_SaaS.Domain.Results;
 using Booking_SaaS.Services.Abstraction;
 using Booking_SaaS.Services.Abstraction.DTOs;
@@ -34,6 +35,7 @@ public class SchedulesController : ApiController
     [Authorize(Roles = "admin")]
     [SwaggerOperation(OperationId = "Schedule_Add")]
     [ServiceFilter(typeof(IdempotencyFilter))]
+    [RequireIdempotencyKey]
     public async Task<ActionResult<Result<int>>> AddAsync(ScheduleAddDto scheduleDto, int resourceId)
     {
         var result = await _resourceOrchestrator.AddScheduleAsync(scheduleDto, resourceId);
@@ -44,6 +46,7 @@ public class SchedulesController : ApiController
     [Authorize(Roles = "admin")]
     [SwaggerOperation(OperationId = "Schedule_Update")]
     [ServiceFilter(typeof(IdempotencyFilter))]
+    [RequireIdempotencyKey]
     public async Task<ActionResult<Result>> UpdateAsync(ScheduleUpdateDto scheduleDto, int resourceId, int scheduleId)
     {
         var result = await _resourceOrchestrator.UpdateScheduleAsync(scheduleDto, resourceId, scheduleId);

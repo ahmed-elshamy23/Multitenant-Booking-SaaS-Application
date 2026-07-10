@@ -16,21 +16,23 @@ public class TenantResolutionMiddleware
         _next = next;
     }
 
-    public async Task InvokeAsync(
-        HttpContext context,
-        ITenantResolver tenantResolver)
+    public async Task InvokeAsync(HttpContext context, ITenantResolver tenantResolver)
     {
-        var tenantId = ResolveTenantId(context);
+        var endpoint = context.GetEndpoint();
+        if (endpoint is null)
+        {
+            await _next(context);
+            return;
+        }
 
-        tenantResolver.CurrentTenantId = tenantId;
-
+        tenantResolver.CurrentTenantId = ResolveTenantId(context, endpoint);
         await _next(context);
     }
 
-    private static int ResolveTenantId(HttpContext context)
+    private static int ResolveTenantId(HttpContext context, Endpoint endpoint)
     {
         var user = context.User;
-        var requiresAuthentication = context.GetEndpoint()!.Metadata.GetMetadata<IAuthorizeData>() != null;
+        var requiresAuthentication = endpoint.Metadata.GetMetadata<IAuthorizeData>() != null;
 
         if (requiresAuthentication && user.Identity?.IsAuthenticated == true &&
             int.TryParse(

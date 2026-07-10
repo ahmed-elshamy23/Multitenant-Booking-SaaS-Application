@@ -1,6 +1,7 @@
 using Booking_SaaS.API.ActionFilters;
 using Booking_SaaS.API.Extensions;
 using Booking_SaaS.API.Middlewares;
+using Booking_SaaS.API.OperationFilters;
 using Booking_SaaS.Domain.Contracts;
 using Booking_SaaS.Domain.Contracts.Repositories;
 using Booking_SaaS.Persistence.Repositories;
@@ -54,7 +55,12 @@ public class Program
         builder.Services.AddHangfire(builder.Configuration);
 
         builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen(x => x.EnableAnnotations());
+        builder.Services.AddSwaggerGen(options =>
+        {
+            options.EnableAnnotations();
+            options.OperationFilter<TenantHeaderOperationFilter>();
+            options.OperationFilter<IdempotencyKeyOperationFilter>();
+        });
 
         var app = builder.Build();
 
