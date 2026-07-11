@@ -72,7 +72,7 @@ namespace Booking_SaaS.Persistence.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    TenantId = table.Column<int>(type: "int", nullable: false),
+                    TenantId = table.Column<int>(type: "int", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -350,13 +350,14 @@ namespace Booking_SaaS.Persistence.Migrations
                 table: "AspNetUsers",
                 columns: new[] { "TenantId", "Email" },
                 unique: true,
-                filter: "[Email] IS NOT NULL");
+                filter: "[TenantId] IS NOT NULL AND [Email] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetUsers_TenantId_Id",
                 table: "AspNetUsers",
                 columns: new[] { "TenantId", "Id" },
-                unique: true);
+                unique: true,
+                filter: "[TenantId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "UserNameIndex",

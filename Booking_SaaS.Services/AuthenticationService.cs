@@ -1,7 +1,3 @@
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Security.Cryptography;
-using System.Text;
 using Booking_SaaS.Domain.Contracts;
 using Booking_SaaS.Domain.Contracts.Repositories;
 using Booking_SaaS.Domain.Entities;
@@ -15,6 +11,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Booking_SaaS.Services;
 
@@ -39,15 +39,47 @@ internal class AuthenticationService : IAuthenticationService
         _repo = unitOfWork.RefreshTokenRepository;
     }
 
-    public async Task<Result<AuthenticationResultDto>> LoginAsync(LoginDto loginDto)
+    public async Task<Result<bool>> IsOwnerAsync(string email)
     {
-        var user = await _userManager.FindByEmailAsync(loginDto.Email);
+        var user = await _userManager.FindByEmailAsync(email);
         if (user == null)
             return Error.Auth.InvalidCredentials;
         if (!user.EmailConfirmed)
             return Error.Auth.EmailNotConfirmed;
 
-        var result = await _userManager.CheckPasswordAsync(user, loginDto.Password);
+        return user.TenantId == null;
+    }
+
+    public async Task<Result<bool>> IsOwnerAsync(int userId)
+    {
+        var user = await _userManager.FindByIdAsync(userId.ToString());
+        if (user == null)
+            return Error.Auth.InvalidUser;
+
+        return user.TenantId == null;
+    }
+
+    public async Task<Result<bool>> IsOwnerAsync(RefreshTokenDto refreshTokenDto)
+    {
+        var specification = new AuthenticationSpecifications.RefreshTokenSpecification(refreshTokenDto.RefreshToken);
+        var existingToken = (await _repo.GetAllAsync(specification)).FirstOrDefault();
+        if (existingToken is null)
+            return Error.Auth.InvalidToken;
+
+        var user = await _userManager.FindByIdAsync(existingToken.UserId.ToString());
+        if (user == null)
+            return Error.Auth.InvalidUser;
+
+        return user.TenantId == null;
+    }
+
+    public async Task<Result<AuthenticationResultDto>> LoginAsync(string email, string password)
+    {
+        var user = await _userManager.FindByEmailAsync(email);
+        if (user == null)
+            return Error.Auth.InvalidUser;
+
+        var result = await _userManager.CheckPasswordAsync(user, password);
         if (!result)
             return Error.Auth.InvalidCredentials;
 
@@ -62,7 +94,7 @@ internal class AuthenticationService : IAuthenticationService
         };
     }
 
-    public async Task<Result<UserTokenDto>> RegisterAsync(RegisterDto registerDto, int currentTenantId)
+    public async Task<Result<UserTokenDto>> RegisterAsync(RegisterDto registerDto, int currentTenantId, bool isAdmin)
     {
         var validationResult = _registerValidator.Validate(registerDto);
         if (!validationResult.IsValid)
@@ -75,7 +107,8 @@ internal class AuthenticationService : IAuthenticationService
             LastName = registerDto.LastName,
             PhoneNumber = registerDto.PhoneNumber,
             Email = registerDto.Email,
-            UserName = $"{currentTenantId}@{registerDto.Email}"
+            UserName = $"{currentTenantId}@{registerDto.Email}",
+            TenantId = currentTenantId
         };
         var existingUser = await _userManager.FindByEmailAsync(registerDto.Email);
         if (existingUser != null)
@@ -86,7 +119,7 @@ internal class AuthenticationService : IAuthenticationService
             return Error.Validation.InvalidParameters(result.Errors
                 .Select(x => x.Description));
 
-        result = await _userManager.AddToRoleAsync(user, "user");
+        result = await _userManager.AddToRoleAsync(user, isAdmin ? "admin" : "user");
         if (!result.Succeeded)
             return Error.Validation.InvalidParameters(result.Errors
                 .Select(x => x.Description));
@@ -219,7 +252,7 @@ internal class AuthenticationService : IAuthenticationService
             new(ClaimTypes.NameIdentifier, user.Id.ToString()),
             new(ClaimTypes.Email, user.Email!),
             new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new("tenant_id", user.TenantId.ToString())
+            new("tenant_id", user.TenantId?.ToString() ?? "")
         };
 
         var roles = await _userManager.GetRolesAsync(user);

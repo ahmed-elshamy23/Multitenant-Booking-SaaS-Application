@@ -1,5 +1,14 @@
 [
   {
+    "firstName": "owner",
+    "lastName": "owner",
+    "email": "owner@gmail.com",
+    "userName": "owner@gmail.com",
+    "phoneNumber": "123456789",
+    "emailConfirmed": true,
+    "tenantId": null
+  },
+  {
     "firstName": "user",
     "lastName": "user",
     "email": "user1@gmail.com",

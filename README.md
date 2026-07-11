@@ -11,6 +11,17 @@ A high-performance, highly reliable multi-tenant scheduling and booking API. Bui
 * **Background Processing:** Hangfire
 * **API Documentation:** Swagger / OpenAPI
 
+## 🔐 Default System Credentials
+
+When the application is first seeded, a default **System Owner** account is created. 
+
+The Owner role acts as the site's overall admin, allowing you to perform global CRUD operations on tenants. Because the Owner does not belong to a specific tenant, you **do not** need to provide the `x-tenant-id` header when hitting the `/login` endpoint with these credentials.
+
+* **Email:** `owner@gmail.com`
+* **Password:** `P@ssw0rd`
+
+> ⚠️ **Important:** These credentials are for local development and testing only. You must change this password or remove the seed data before deploying to a production environment.
+
 ## 🏗 Architecture & Patterns
 
 This solution adheres to **Onion Architecture** principles, divided into five main layers (`Domain`, `Services.Abstraction`, `Services`, `Persistence`, and `API`) to ensure strict dependency inversion and separation of concerns.
@@ -42,8 +53,6 @@ This solution adheres to **Onion Architecture** principles, divided into five ma
 
 ## 🗺 What's Next?
 
-* **Owner Role:** Implementation of a centralized TenantController to allow Super Admins to create, suspend, and assign admins to tenants.
 * **Payment Gateway Integration:** Handling booking payments and issuing refunds.
 * **Waitlist & Notifications:** Automated queuing and notification triggers for highly contested schedules.
-* **Recurrent Bookings:** Support for complex, repeating schedule definitions.
 * **Subscription Plans:** SaaS tiering (e.g., Free, Pro, Enterprise) linked to tenant limits.

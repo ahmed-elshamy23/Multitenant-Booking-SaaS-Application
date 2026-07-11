@@ -80,7 +80,7 @@ namespace Booking_SaaS.Persistence.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TenantId")
+                    b.Property<int?>("TenantId")
                         .HasColumnType("int");
 
                     b.Property<bool>("TwoFactorEnabled")
@@ -102,10 +102,11 @@ namespace Booking_SaaS.Persistence.Migrations
 
                     b.HasIndex("TenantId", "Email")
                         .IsUnique()
-                        .HasFilter("[Email] IS NOT NULL");
+                        .HasFilter("[TenantId] IS NOT NULL AND [Email] IS NOT NULL");
 
                     b.HasIndex("TenantId", "Id")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[TenantId] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
                 });
@@ -485,8 +486,7 @@ namespace Booking_SaaS.Persistence.Migrations
                     b.HasOne("Booking_SaaS.Domain.Entities.Tenant", "Tenant")
                         .WithMany("Users")
                         .HasForeignKey("TenantId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Tenant");
                 });

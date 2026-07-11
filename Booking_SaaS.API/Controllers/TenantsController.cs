@@ -2,12 +2,13 @@ using Booking_SaaS.Domain.Results;
 using Booking_SaaS.Services.Abstraction;
 using Booking_SaaS.Services.Abstraction.DTOs;
 using Booking_SaaS.Services.Abstraction.DTOs.Tenant;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace Booking_SaaS.API.Controllers;
 
-// [Authorize(Roles = "owner")]
+[Authorize(Roles = "owner")]
 public class TenantsController : ApiController
 {
     private readonly ITenantService _tenantService;
