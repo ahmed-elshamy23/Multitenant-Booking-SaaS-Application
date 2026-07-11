@@ -1,4 +1,3 @@
-using System.Security.Claims;
 using Booking_SaaS.API.ActionFilters;
 using Booking_SaaS.API.Attributes;
 using Booking_SaaS.Domain.Results;
@@ -8,6 +7,7 @@ using Booking_SaaS.Services.Abstraction.Orchestrators;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
+using System.Security.Claims;
 
 namespace Booking_SaaS.API.Controllers;
 
@@ -31,11 +31,11 @@ public class AuthenticationController : ApiController
     }
 
     [Authorize(Roles = "admin")]
-    [HttpPost("register")]
-    [SwaggerOperation(OperationId = "Auth_Register")]
+    [HttpPost("users")]
+    [SwaggerOperation(OperationId = "Auth_AddUser")]
     [ServiceFilter(typeof(IdempotencyFilter))]
     [RequireIdempotencyKey]
-    public async Task<ActionResult<Result>> RegisterAsync(RegisterDto registerDto)
+    public async Task<ActionResult<Result>> AddUserAsync(RegisterDto registerDto)
     {
         var result = await _authenticationOrchestrator.RegisterAsync(registerDto);
         return ToApiResponse(result);
@@ -58,7 +58,7 @@ public class AuthenticationController : ApiController
     public async Task<ActionResult<Result>> ChangePasswordAsync(ChangePasswordDto changePasswordDto)
     {
         var userId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
-        var result = await _authenticationOrchestrator.ChangePasswordAsync(changePasswordDto, userId);
+        var result = await _authenticationOrchestrator.ChangePasswordAsync(changePasswordDto, int.Parse(userId));
         return ToApiResponse(result);
     }
 
@@ -86,6 +86,15 @@ public class AuthenticationController : ApiController
     public async Task<ActionResult<Result<AuthenticationResultDto>>> RefreshAsync(RefreshTokenDto refreshTokenDto)
     {
         var result = await _authenticationOrchestrator.RefreshAsync(refreshTokenDto);
+        return ToApiResponse(result);
+    }
+
+    [Authorize(Roles = "owner")]
+    [HttpPost("admins")]
+    [SwaggerOperation(OperationId = "Auth_AddAdmin")]
+    public async Task<ActionResult<Result>> AddAdminAsync(RegisterDto registerDto, int tenantId)
+    {
+        var result = await _authenticationOrchestrator.RegisterAsync(registerDto, tenantId);
         return ToApiResponse(result);
     }
 }

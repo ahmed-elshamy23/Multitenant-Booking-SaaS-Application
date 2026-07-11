@@ -11,6 +11,35 @@ A high-performance, highly reliable multi-tenant scheduling and booking API. Bui
 * **Background Processing:** Hangfire
 * **API Documentation:** Swagger / OpenAPI
 
+## 🔐 Default System Credentials
+
+When the application is first seeded, several default accounts are created for testing the multi-tenant architecture and role-based access control. 
+
+All seeded users share the same default password:
+* **Password:** `P@ssw0rd`
+
+### System Owner (Global Access)
+The Owner role acts as the site's overall admin, allowing you to perform global CRUD operations on tenants. Because the Owner does not belong to a specific tenant, you **do not** need to provide the `X-Tenant-Id` header when hitting the `/login` endpoint or managing global resources.
+
+| Role | Email | Tenant Name | `X-Tenant-Id` Header |
+| :--- | :--- | :--- | :--- |
+| **Owner** | `owner@gmail.com` | *None (Global)* | *Not Required* |
+
+### Tenant Accounts (Isolated Access)
+These accounts belong to specific active tenants. When authenticating or accessing tenant-scoped resources with these users, you **must** include the corresponding `x-tenant-id` header in your HTTP requests.
+
+| Role | Email | Tenant Name | `X-Tenant-Id` Header |
+| :--- | :--- | :--- | :--- |
+| **Admin** | `admin1@gmail.com` | Organization A | `1` |
+| User | `user1@gmail.com` | Organization A | `1` |
+| User | `user11@gmail.com` | Organization A | `1` |
+| **Admin** | `admin2@gmail.com` | Organization B | `2` |
+| User | `user2@gmail.com` | Organization B | `2` |
+| **Admin** | `admin3@gmail.com` | Organization C | `3` |
+| User | `user3@gmail.com` | Organization C | `3` |
+
+> ⚠️ **Important:** These credentials are for local development and testing only. You must change the default passwords or remove the seed data before deploying to a production environment.
+
 ## 🏗 Architecture & Patterns
 
 This solution adheres to **Onion Architecture** principles, divided into five main layers (`Domain`, `Services.Abstraction`, `Services`, `Persistence`, and `API`) to ensure strict dependency inversion and separation of concerns.
@@ -42,8 +71,6 @@ This solution adheres to **Onion Architecture** principles, divided into five ma
 
 ## 🗺 What's Next?
 
-* **Owner Role:** Implementation of a centralized TenantController to allow Super Admins to create, suspend, and assign admins to tenants.
 * **Payment Gateway Integration:** Handling booking payments and issuing refunds.
 * **Waitlist & Notifications:** Automated queuing and notification triggers for highly contested schedules.
-* **Recurrent Bookings:** Support for complex, repeating schedule definitions.
 * **Subscription Plans:** SaaS tiering (e.g., Free, Pro, Enterprise) linked to tenant limits.

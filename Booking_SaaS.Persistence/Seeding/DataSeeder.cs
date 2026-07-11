@@ -1,10 +1,10 @@
-using System.Text.Json;
 using Booking_SaaS.Domain.Contracts;
 using Booking_SaaS.Domain.Entities;
 using Booking_SaaS.Persistence.Context;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 
 namespace Booking_SaaS.Persistence.Seeding;
 
@@ -68,6 +68,8 @@ public class DataSeeder : IDataSeeder
                         await _userManager.AddToRoleAsync(user, "user");
                     else if (user.Email?.StartsWith("admin") ?? false)
                         await _userManager.AddToRoleAsync(user, "admin");
+                    else if (user.Email?.StartsWith("owner") ?? false)
+                        await _userManager.AddToRoleAsync(user, "owner");
                 }
         }
     }

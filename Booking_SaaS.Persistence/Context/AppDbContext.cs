@@ -56,10 +56,13 @@ public class AppDbContext : IdentityDbContext<AppUser, IdentityRole<int>, int>
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
     {
-        if (CurrentTenantId != 0)
-            foreach (var entry in ChangeTracker.Entries<IMustHaveTenant>().ToList())
-                if (entry.State == EntityState.Added)
-                    entry.Entity.TenantId = CurrentTenantId;
+        foreach (var entry in ChangeTracker.Entries<IMustHaveTenant>().ToList())
+            if (entry.State == EntityState.Added)
+                entry.Entity.TenantId = CurrentTenantId;
+
+        foreach (var entry in ChangeTracker.Entries<IMayHaveTenant>())
+            if (entry.State == EntityState.Added && CurrentTenantId != 0)
+                entry.Entity.TenantId = CurrentTenantId;
 
         foreach (var entry in ChangeTracker.Entries<BaseEntity>().ToList())
             switch (entry.State)

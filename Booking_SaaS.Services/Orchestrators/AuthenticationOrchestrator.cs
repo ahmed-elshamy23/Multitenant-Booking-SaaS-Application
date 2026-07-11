@@ -29,19 +29,27 @@ public class AuthenticationOrchestrator : IAuthenticationOrchestrator
         _currentTenantId = tenantResolver.CurrentTenantId;
     }
 
-    public async Task<Result<AuthenticationResultDto>> LoginAsync(LoginDto loginDto,
-        CancellationToken cancellationToken = default)
+    public async Task<Result<AuthenticationResultDto>> LoginAsync(LoginDto loginDto, CancellationToken cancellationToken = default)
     {
-        var isActiveTenantResult = await _tenantService.IsActiveAsync(_currentTenantId, cancellationToken);
-        if (!isActiveTenantResult.IsSuccess)
-            return isActiveTenantResult.Error!;
-        if (!isActiveTenantResult.Value)
-            return Error.Tenant.Inactive;
+        var userResult = await _authenticationService.IsOwnerAsync(loginDto.Email);
+        if (!userResult.IsSuccess)
+            return userResult.Error!;
+
+        var isOwner = userResult.Value;
+        if (!isOwner)
+        {
+            var isActiveTenantResult = await _tenantService.IsActiveAsync(_currentTenantId, cancellationToken);
+            if (!isActiveTenantResult.IsSuccess)
+                return isActiveTenantResult.Error!;
+
+            if (!isActiveTenantResult.Value)
+                return Error.Tenant.Inactive;
+        }
 
         await _unitOfWork.BeginTransactionAsync(cancellationToken);
         try
         {
-            var result = await _authenticationService.LoginAsync(loginDto);
+            var result = await _authenticationService.LoginAsync(loginDto.Email, loginDto.Password);
             if (!result.IsSuccess)
             {
                 await _unitOfWork.RollbackAsync(cancellationToken);
@@ -58,31 +66,32 @@ public class AuthenticationOrchestrator : IAuthenticationOrchestrator
         }
     }
 
-    public async Task<Result> RegisterAsync(RegisterDto registerDto)
+    public async Task<Result> RegisterAsync(RegisterDto registerDto, int? tenantId = null)
     {
-        var isActiveTenantResult = await _tenantService.IsActiveAsync(_currentTenantId);
+        var currentTenantId = tenantId ?? _currentTenantId;
+        var isActiveTenantResult = await _tenantService.IsActiveAsync(currentTenantId);
         if (!isActiveTenantResult.IsSuccess)
             return isActiveTenantResult.Error!;
         if (!isActiveTenantResult.Value)
             return Error.Tenant.Inactive;
 
-        var tokenResult = await _authenticationService.RegisterAsync(registerDto, _currentTenantId);
+        var tokenResult = await _authenticationService.RegisterAsync(registerDto, currentTenantId, tenantId.HasValue);
         if (!tokenResult.IsSuccess)
             return tokenResult;
 
         var frontendUrl = _domainOptions.Value.Url;
-        var currentTenantNameResult = await _tenantService.GetTenantNameByIdAsync(_currentTenantId);
+        var currentTenantNameResult = await _tenantService.GetTenantNameByIdAsync(currentTenantId);
         if (!currentTenantNameResult.IsSuccess)
             return currentTenantNameResult;
 
         _emailService.SendEmail(new EmailDto
-            {
-                To = registerDto.Email,
-                Subject = "Confirm Your Email",
-                Link =
+        {
+            To = registerDto.Email,
+            Subject = "Confirm Your Email",
+            Link =
                     $"{frontendUrl}/confirm-success?userId={tokenResult.Value!.UserId}&token={tokenResult.Value.Token}",
-                Template = MailTemplate.ConfirmEmail
-            }, $"{registerDto.FirstName} {registerDto.LastName}", currentTenantNameResult.Value!);
+            Template = MailTemplate.ConfirmEmail
+        }, $"{registerDto.FirstName} {registerDto.LastName}", currentTenantNameResult.Value!);
         return Result.Success();
     }
 
@@ -97,15 +106,24 @@ public class AuthenticationOrchestrator : IAuthenticationOrchestrator
         return await _authenticationService.ConfirmEmailAsync(confirmEmailDto);
     }
 
-    public async Task<Result> ChangePasswordAsync(ChangePasswordDto changePasswordDto, string userId)
+    public async Task<Result> ChangePasswordAsync(ChangePasswordDto changePasswordDto, int userId)
     {
-        var isActiveTenantResult = await _tenantService.IsActiveAsync(_currentTenantId);
-        if (!isActiveTenantResult.IsSuccess)
-            return isActiveTenantResult.Error!;
-        if (!isActiveTenantResult.Value)
-            return Error.Tenant.Inactive;
+        var userResult = await _authenticationService.IsOwnerAsync(userId);
+        if (!userResult.IsSuccess)
+            return userResult.Error!;
 
-        return await _authenticationService.ChangePasswordAsync(changePasswordDto, userId);
+        var isOwner = userResult.Value;
+        if (!isOwner)
+        {
+            var isActiveTenantResult = await _tenantService.IsActiveAsync(_currentTenantId);
+            if (!isActiveTenantResult.IsSuccess)
+                return isActiveTenantResult.Error!;
+
+            if (!isActiveTenantResult.Value)
+                return Error.Tenant.Inactive;
+        }
+
+        return await _authenticationService.ChangePasswordAsync(changePasswordDto, userId.ToString());
     }
 
     public async Task<Result> ForgetPasswordAsync(ForgotPasswordDto forgetPasswordDto)
@@ -126,13 +144,13 @@ public class AuthenticationOrchestrator : IAuthenticationOrchestrator
             return currentTenantNameResult;
 
         _emailService.SendEmail(new EmailDto
-            {
-                To = forgetPasswordDto.Email,
-                Subject = "Reset Password",
-                Link =
+        {
+            To = forgetPasswordDto.Email,
+            Subject = "Reset Password",
+            Link =
                     $"{frontendUrl}/reset-password?userId={tokenResult.Value!.UserId}&token={tokenResult.Value.Token}",
-                Template = MailTemplate.ResetPassword
-            }, $"{forgetPasswordDto.FirstName} {forgetPasswordDto.LastName}", currentTenantNameResult.Value!);
+            Template = MailTemplate.ResetPassword
+        }, $"{forgetPasswordDto.FirstName} {forgetPasswordDto.LastName}", currentTenantNameResult.Value!);
         return Result.Success();
     }
 
@@ -149,11 +167,20 @@ public class AuthenticationOrchestrator : IAuthenticationOrchestrator
 
     public async Task<Result<AuthenticationResultDto>> RefreshAsync(RefreshTokenDto refreshTokenDto)
     {
-        var isActiveTenantResult = await _tenantService.IsActiveAsync(_currentTenantId);
-        if (!isActiveTenantResult.IsSuccess)
-            return isActiveTenantResult.Error!;
-        if (!isActiveTenantResult.Value)
-            return Error.Tenant.Inactive;
+        var userResult = await _authenticationService.IsOwnerAsync(refreshTokenDto);
+        if (!userResult.IsSuccess)
+            return userResult.Error!;
+
+        var isOwner = userResult.Value;
+        if (!isOwner)
+        {
+            var isActiveTenantResult = await _tenantService.IsActiveAsync(_currentTenantId);
+            if (!isActiveTenantResult.IsSuccess)
+                return isActiveTenantResult.Error!;
+
+            if (!isActiveTenantResult.Value)
+                return Error.Tenant.Inactive;
+        }
 
         await _unitOfWork.BeginTransactionAsync();
         try

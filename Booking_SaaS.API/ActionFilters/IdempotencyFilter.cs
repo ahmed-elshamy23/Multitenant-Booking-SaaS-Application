@@ -1,8 +1,8 @@
-using System.Text.Json;
 using Booking_SaaS.Domain.Results;
 using Booking_SaaS.Services.Abstraction;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using System.Text.Json;
 
 namespace Booking_SaaS.API.ActionFilters;
 
@@ -18,7 +18,7 @@ public class IdempotencyFilter : IAsyncActionFilter
 
     public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
     {
-        if (!context.HttpContext.Request.Headers.TryGetValue(IdempotencyHeader, out var extractedKey))
+        if (!context.HttpContext.Request.Headers.TryGetValue(IdempotencyHeader, out var extractedKey) || string.IsNullOrEmpty(extractedKey))
         {
             context.Result = new ContentResult
             {
