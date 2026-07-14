@@ -1,6 +1,6 @@
 namespace Booking_SaaS.Services.Abstraction.DTOs;
 
-public class BaseDateTimeFilterDto : BaseDto
+public abstract class BaseDateTimeFilterDto : BaseDto
 {
     public DateOnly? StartDate { get; set; }
     public DateOnly? EndDate { get; set; }

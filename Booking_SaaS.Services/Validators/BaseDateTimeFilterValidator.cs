@@ -3,9 +3,9 @@ using FluentValidation;
 
 namespace Booking_SaaS.Services.Validators;
 
-public class BaseDateTimeFilterValidator<T> : AbstractValidator<T> where T : BaseDateTimeFilterDto
+public abstract class BaseDateTimeFilterValidator<T> : AbstractValidator<T> where T : BaseDateTimeFilterDto
 {
-    public BaseDateTimeFilterValidator()
+    protected BaseDateTimeFilterValidator()
     {
         RuleFor(d => d.EndTime)
             .GreaterThan(d => d.StartTime)
@@ -25,6 +25,6 @@ public class BaseDateTimeFilterValidator<T> : AbstractValidator<T> where T : Bas
         RuleFor(d => d.EndDate)
             .GreaterThanOrEqualTo(d => DateOnly.FromDateTime(DateTime.UtcNow))
             .When(d => d.EndDate.HasValue)
-            .WithMessage("Start date can't be in the past");
+            .WithMessage("End date can't be in the past");
     }
 }

@@ -11,6 +11,7 @@ public abstract class BasePaginationValidator<T> : AbstractValidator<PaginatedDt
             .GreaterThanOrEqualTo(1);
 
         RuleFor(x => x.PageSize)
-            .GreaterThanOrEqualTo(5);
+            .GreaterThanOrEqualTo(5)
+            .LessThan(50);
     }
 }

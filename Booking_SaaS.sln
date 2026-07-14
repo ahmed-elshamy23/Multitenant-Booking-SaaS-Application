@@ -1,5 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking_SaaS.API", "Booking_SaaS.API\Booking_SaaS.API.csproj", "{246F0804-D4AC-45BC-91AD-67138BB9C268}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking_SaaS.Domain", "Booking_SaaS.Domain\Booking_SaaS.Domain.csproj", "{E8C39B7A-67C0-4A5C-A1EB-1901B4825351}"
@@ -9,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking_SaaS.Services", "Booking_SaaS.Services\Booking_SaaS.Services.csproj", "{D79CB218-6467-4FB4-8A1A-0DAC7635A586}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking_SaaS.Services.Abstraction", "Booking_SaaS.Services.Abstraction\Booking_SaaS.Services.Abstraction.csproj", "{EA69C25C-AD9C-43A5-A8AF-7BD34E0DC0B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking_SaaS.Tests", "Booking_SaaS.Tests\Booking_SaaS.Tests.csproj", "{134FCC3C-A980-4DE7-A56F-023CC2E87451}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +41,15 @@ Global
 		{EA69C25C-AD9C-43A5-A8AF-7BD34E0DC0B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA69C25C-AD9C-43A5-A8AF-7BD34E0DC0B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA69C25C-AD9C-43A5-A8AF-7BD34E0DC0B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{134FCC3C-A980-4DE7-A56F-023CC2E87451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134FCC3C-A980-4DE7-A56F-023CC2E87451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134FCC3C-A980-4DE7-A56F-023CC2E87451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134FCC3C-A980-4DE7-A56F-023CC2E87451}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60FDE894-DBCD-471F-9C4F-344F399BDC4A}
 	EndGlobalSection
 EndGlobal

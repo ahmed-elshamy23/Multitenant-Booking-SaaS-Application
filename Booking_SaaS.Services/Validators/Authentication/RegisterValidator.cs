@@ -16,9 +16,9 @@ public class RegisterValidator : AbstractValidator<RegisterDto>
 
         RuleFor(d => d.LastName)
             .NotEmpty()
-            .WithMessage("First Name is required")
+            .WithMessage("Last Name is required")
             .Matches("^[a-zA-Z][a-zA-Z_]*$")
-            .WithMessage("First Name must contain only alphabetic characters")
+            .WithMessage("Last Name must contain only alphabetic characters")
             .MaximumLength(50);
 
         RuleFor(d => d.PhoneNumber)
