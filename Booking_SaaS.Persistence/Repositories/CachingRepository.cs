@@ -1,5 +1,5 @@
-using Booking_SaaS.Domain.Contracts.Repositories;
-using Booking_SaaS.Domain.Options;
+using Booking_SaaS.Persistence.Options;
+using Booking_SaaS.Services.Abstraction.Contracts;
 using Microsoft.Extensions.Options;
 using StackExchange.Redis;
 

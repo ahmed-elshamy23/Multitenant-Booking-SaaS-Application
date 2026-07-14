@@ -2,10 +2,10 @@
 using Booking_SaaS.Domain.Contracts;
 using Booking_SaaS.Domain.Entities;
 using Booking_SaaS.Services.Abstraction;
+using Booking_SaaS.Services.Abstraction.Contracts;
 using Booking_SaaS.Services.Abstraction.DTOs;
 using Booking_SaaS.Services.Abstraction.DTOs.Authentication;
 using Booking_SaaS.Services.Abstraction.DTOs.Bookings;
-using Booking_SaaS.Services.Abstraction.DTOs.Email;
 using Booking_SaaS.Services.Abstraction.DTOs.Resource;
 using Booking_SaaS.Services.Abstraction.DTOs.Schedule;
 using Booking_SaaS.Services.Abstraction.DTOs.Tenant;

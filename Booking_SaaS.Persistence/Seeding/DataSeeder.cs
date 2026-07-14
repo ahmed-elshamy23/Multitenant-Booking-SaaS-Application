@@ -1,6 +1,6 @@
-using Booking_SaaS.Domain.Contracts;
 using Booking_SaaS.Domain.Entities;
 using Booking_SaaS.Persistence.Context;
+using Booking_SaaS.Persistence.Contracts;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

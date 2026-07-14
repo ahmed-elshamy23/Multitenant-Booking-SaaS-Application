@@ -7,13 +7,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Booking_SaaS.Domain\Booking_SaaS.Domain.csproj"/>
+        <ProjectReference Include="..\Booking_SaaS.Services.Abstraction\Booking_SaaS.Services.Abstraction.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <FrameworkReference Include="Microsoft.AspNetCore.App"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.17"/>
-        <PackageReference Include="StackExchange.Redis" Version="3.0.11"/>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.17" />
+        <PackageReference Include="StackExchange.Redis" Version="3.0.11" />
     </ItemGroup>
 
 </Project>

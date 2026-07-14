@@ -1,6 +1,6 @@
-using System.Security.Claims;
-using Booking_SaaS.Domain.Contracts;
+using Booking_SaaS.Services.Abstraction.Contracts;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace Booking_SaaS.API.Middlewares;
 

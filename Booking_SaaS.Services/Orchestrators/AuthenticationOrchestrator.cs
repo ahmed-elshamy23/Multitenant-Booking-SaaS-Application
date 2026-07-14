@@ -1,8 +1,10 @@
 using Booking_SaaS.Domain.Contracts;
 using Booking_SaaS.Domain.Results;
 using Booking_SaaS.Services.Abstraction;
+using Booking_SaaS.Services.Abstraction.Contracts;
 using Booking_SaaS.Services.Abstraction.DTOs.Authentication;
 using Booking_SaaS.Services.Abstraction.DTOs.Email;
+using Booking_SaaS.Services.Abstraction.Options;
 using Booking_SaaS.Services.Abstraction.Orchestrators;
 using Microsoft.Extensions.Options;
 

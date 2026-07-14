@@ -1,8 +1,9 @@
-using System.Net;
-using System.Net.Mail;
 using Booking_SaaS.Services.Abstraction;
 using Booking_SaaS.Services.Abstraction.DTOs.Email;
+using Booking_SaaS.Services.Abstraction.Options;
 using Microsoft.Extensions.Options;
+using System.Net;
+using System.Net.Mail;
 
 namespace Booking_SaaS.Services;
 

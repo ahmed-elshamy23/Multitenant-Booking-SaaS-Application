@@ -1,4 +1,4 @@
-namespace Booking_SaaS.Services.Abstraction.DTOs.Authentication;
+namespace Booking_SaaS.Services.Abstraction.Options;
 
 public class DomainOptions
 {

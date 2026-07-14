@@ -1,5 +1,5 @@
-using Booking_SaaS.Domain.Contracts.Repositories;
 using Booking_SaaS.Services.Abstraction;
+using Booking_SaaS.Services.Abstraction.Contracts;
 
 namespace Booking_SaaS.Services;
 

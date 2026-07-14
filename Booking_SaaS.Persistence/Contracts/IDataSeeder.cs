@@ -1,4 +1,4 @@
-namespace Booking_SaaS.Domain.Contracts;
+namespace Booking_SaaS.Persistence.Contracts;
 
 public interface IDataSeeder
 {

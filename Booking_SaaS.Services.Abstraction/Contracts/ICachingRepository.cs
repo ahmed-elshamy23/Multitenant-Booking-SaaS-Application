@@ -1,4 +1,4 @@
-namespace Booking_SaaS.Domain.Contracts.Repositories;
+namespace Booking_SaaS.Services.Abstraction.Contracts;
 
 public interface ICachingRepository
 {

@@ -1,17 +1,15 @@
-using System.Text;
-using Booking_SaaS.Domain.Contracts;
 using Booking_SaaS.Domain.Entities;
-using Booking_SaaS.Domain.Options;
 using Booking_SaaS.Persistence.Context;
+using Booking_SaaS.Persistence.Contracts;
+using Booking_SaaS.Persistence.Options;
 using Booking_SaaS.Persistence.Seeding;
-using Booking_SaaS.Services.Abstraction.DTOs.Authentication;
-using Booking_SaaS.Services.Abstraction.DTOs.Email;
 using Booking_SaaS.Services.Abstraction.Options;
 using Hangfire;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Booking_SaaS.API.Extensions;
 

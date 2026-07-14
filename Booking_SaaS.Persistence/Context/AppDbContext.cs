@@ -1,5 +1,6 @@
 using Booking_SaaS.Domain.Contracts;
 using Booking_SaaS.Domain.Entities;
+using Booking_SaaS.Services.Abstraction.Contracts;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;

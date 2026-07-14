@@ -1,4 +1,4 @@
-using Booking_SaaS.Domain.Contracts;
+using Booking_SaaS.Services.Abstraction.Contracts;
 
 namespace Booking_SaaS.API;
 

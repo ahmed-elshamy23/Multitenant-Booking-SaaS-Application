@@ -1,4 +1,4 @@
-namespace Booking_SaaS.Domain.Options;
+namespace Booking_SaaS.Persistence.Options;
 
 public class CachingOptions
 {
