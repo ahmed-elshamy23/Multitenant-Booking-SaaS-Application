@@ -1,8 +1,8 @@
 using Booking_SaaS.Services.Abstraction;
+using Booking_SaaS.Services.Abstraction.Contracts;
 using Booking_SaaS.Services.Abstraction.DTOs.Email;
 using Booking_SaaS.Services.Abstraction.Options;
 using Microsoft.Extensions.Options;
-using System.Net;
 using System.Net.Mail;
 
 namespace Booking_SaaS.Services;
@@ -11,35 +11,34 @@ internal class EmailService : IEmailService
 {
     private readonly string _emailAddress;
     private readonly string _logoUrl;
-    private readonly string _password;
+    private readonly ISmtpClientWrapper _smtpClient;
 
-    public EmailService(IOptions<EmailOptions> options)
+    public EmailService(IOptions<EmailOptions> options, ISmtpClientWrapper smtpClient)
     {
         _emailAddress = options.Value.EmailAddress;
-        _password = options.Value.Password;
         _logoUrl = options.Value.LogoUrl;
+        _smtpClient = smtpClient;
     }
 
     public void SendEmail(EmailDto email, string username, string tenantName)
     {
-        var message = new MailMessage();
-        message.From = new MailAddress(_emailAddress, "Booking Application");
+        var message = new MailMessage
+        {
+            From = new MailAddress(_emailAddress, "Booking Application"),
+            IsBodyHtml = true,
+            Subject = email.Subject,
+        };
         message.To.Add(email.To);
-        message.IsBodyHtml = true;
-        message.Subject = email.Subject;
 
         message.Body = email.Template switch
         {
             MailTemplate.ConfirmEmail => BuildConfirmEmailTemplate(email.Link, username, tenantName),
             MailTemplate.ResetPassword => BuildResetPasswordTemplate(email.Link, username, tenantName),
             _ => throw new ArgumentOutOfRangeException(nameof(email.Template), email.Template,
-                "Unsupported email template.")
+                                                       "Unsupported email template.")
         };
 
-        using var smtpClient = new SmtpClient("smtp.gmail.com", 587);
-        smtpClient.EnableSsl = true;
-        smtpClient.Credentials = new NetworkCredential(_emailAddress, _password);
-        smtpClient.Send(message);
+        _smtpClient.Send(message);
     }
 
     private string BuildConfirmEmailTemplate(string link, string username, string tenantName)

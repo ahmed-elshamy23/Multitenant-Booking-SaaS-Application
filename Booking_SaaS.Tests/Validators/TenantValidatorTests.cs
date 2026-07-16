@@ -2,7 +2,7 @@
 using Booking_SaaS.Services.Validators.Tenant;
 using FluentValidation.TestHelper;
 
-namespace Booking_SaaS.Tests.Validators.Tenant;
+namespace Booking_SaaS.Tests.Validators;
 
 public class TenantValidatorTests
 {

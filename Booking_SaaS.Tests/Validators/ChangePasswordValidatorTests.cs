@@ -2,7 +2,7 @@
 using Booking_SaaS.Services.Validators.Authentication;
 using FluentValidation.TestHelper;
 
-namespace Booking_SaaS.Tests.Validators.Authentication;
+namespace Booking_SaaS.Tests.Validators;
 
 public class ChangePasswordValidatorTests
 {

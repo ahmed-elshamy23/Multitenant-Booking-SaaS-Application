@@ -69,6 +69,41 @@ This solution adheres to **Onion Architecture** principles, divided into five ma
     * Bypasses heavy pessimistic locks by returning the cached JSON payload (HTTP Status Code + Body) on duplicate requests.
     * Supports `POST` and complex `PUT` endpoints (like `Schedule_Update` with side effects).
 
+## 🧪 Testing Strategy
+
+Stability and reliability are core pillars of this project. To ensure the business logic remains robust as the codebase grows, a comprehensive suite of **over 200+ unit tests** is maintained covering our services, validators, and core domain rules.
+
+### 🛠️ The Testing Stack
+
+Unit tests are built using industry-standard tools designed for isolation, readability, and speed:
+
+* **[xUnit](https://xunit.net/)** – Our modern, robust testing framework of choice, utilized for structuring clean, isolated test execution paths.
+* **[Moq](https://github.com/devlooped/moq)** – Used to cleanly isolate our service-layer logic by mocking external dependencies (such as repositories, identity managers, and validators).
+* **[FluentAssertions](https://fluentassertions.com/)** – Employs a highly readable, natural-language assertion style that makes test failures incredibly easy to diagnose.
+
+---
+
+### ✍️ Test Design Patterns
+
+A **Self-Contained AAA (Arrange, Act, Assert)** approach is followed. Rather than relying on shared state, constructor setups, or global mocks that can hide logic:
+
+* **Every test is a standalone story.** All mocked behavior, inputs, and expected outcomes are declared explicitly inside the test itself.
+* **Zero side-effects.** Tests do not leak state or configuration to other tests, guaranteeing predictable execution and preventing flaky test runs.
+* **Optimized Test Doubles.** Heavy, slow-running integration paths (like multi-tenant query filters, database transactions, or resource locks) are deliberately out-of-scope for our unit tests, keeping our test suite blazing fast.
+
+> 💡 **CI/CD Friendly:** Because our unit tests are completely decoupled from external databases and networks, the entire suite of 200+ tests runs in seconds, making it ideal for pull request validation gates.
+
+---
+
+### 🚀 Running the Tests
+
+To run the entire unit test suite from your terminal, execute:
+
+```bash
+dotnet test
+```
+
+
 ## 🗺 What's Next?
 
 * **Payment Gateway Integration:** Handling booking payments and issuing refunds.

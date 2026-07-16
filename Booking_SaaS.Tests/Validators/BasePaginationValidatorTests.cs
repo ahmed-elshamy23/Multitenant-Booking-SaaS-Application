@@ -2,7 +2,7 @@
 using Booking_SaaS.Services.Validators.Pagination;
 using FluentValidation.TestHelper;
 
-namespace Booking_SaaS.Tests.Validators.Pagination;
+namespace Booking_SaaS.Tests.Validators;
 
 public class DummyPaginationValidator : BasePaginationValidator<BaseDto> { }
 

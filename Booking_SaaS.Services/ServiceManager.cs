@@ -38,7 +38,8 @@ public class ServiceManager : IServiceManager
         IValidator<PaginatedDto<BookingDto>> bookingPaginationValidator, IValidator<BookingAddDto> bookingValidator,
         ICachingService cachingService)
     {
-        var emailService = new Lazy<IEmailService>(() => new EmailService(emailOptions));
+        var smtpClient = new Lazy<ISmtpClientWrapper>(() => new SmtpClientWrapper(emailOptions));
+        var emailService = new Lazy<IEmailService>(() => new EmailService(emailOptions, smtpClient.Value));
 
         _tenantService =
             new Lazy<ITenantService>(() =>

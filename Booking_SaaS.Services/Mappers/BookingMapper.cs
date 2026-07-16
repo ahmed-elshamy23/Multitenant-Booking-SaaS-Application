@@ -9,8 +9,8 @@ public class BookingMapper : Profile
     public BookingMapper()
     {
         CreateMap<Booking, BookingDto>()
-            .ForMember(dest => dest.StartTime, opt => opt.MapFrom(src => src.StartTime ?? src.Schedule.StartTime))
-            .ForMember(dest => dest.EndTime, opt => opt.MapFrom(src => src.EndTime ?? src.Schedule.EndTime));
+            .ForMember(dest => dest.StartTime, opt => opt.MapFrom(src => src.StartTime ?? src.Schedule!.StartTime))
+            .ForMember(dest => dest.EndTime, opt => opt.MapFrom(src => src.EndTime ?? src.Schedule!.EndTime));
 
         CreateMap<BookingAddDto, Booking>();
     }

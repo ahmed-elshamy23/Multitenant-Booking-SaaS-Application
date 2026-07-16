@@ -96,8 +96,7 @@ internal class ScheduleService : IScheduleService
         if (await CheckDuplicateScheduleAsync(scheduleDto, resourceId, 0))
             return Error.Schedule.Duplicate;
 
-        if (scheduleDto.DayOfWeek == null)
-            scheduleDto.DayOfWeek = scheduleDto.Date!.Value.DayOfWeek;
+        scheduleDto.DayOfWeek ??= scheduleDto.Date!.Value.DayOfWeek;
 
         var schedule = _mapper.Map<Schedule>(scheduleDto);
         schedule.ResourceId = resourceId;
