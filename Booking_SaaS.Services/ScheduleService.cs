@@ -20,9 +20,13 @@ internal class ScheduleService : IScheduleService
     private readonly IScheduleRepository _repo;
     private readonly IUnitOfWork _unitOfWork;
     private readonly IValidator<ScheduleAddDto> _validator;
+    private readonly IBackgroundJobClient _backgroundJobClient;
+    private readonly IRecurringJobManager _recurringJobManager;
 
     public ScheduleService(IUnitOfWork unitOfWork, IValidator<ScheduleFilterDto> filterValidator, IMapper mapper,
-        IValidator<PaginatedDto<ScheduleResultDto>> paginationValidator, IValidator<ScheduleAddDto> validator)
+                           IValidator<PaginatedDto<ScheduleResultDto>> paginationValidator,
+                           IValidator<ScheduleAddDto> validator, IBackgroundJobClient backgroundJobClient,
+                           IRecurringJobManager recurringJobManager)
     {
         _unitOfWork = unitOfWork;
         _filterValidator = filterValidator;
@@ -30,6 +34,8 @@ internal class ScheduleService : IScheduleService
         _paginationValidator = paginationValidator;
         _validator = validator;
         _repo = _unitOfWork.ScheduleRepository;
+        _backgroundJobClient = backgroundJobClient;
+        _recurringJobManager = recurringJobManager;
     }
 
     public async Task<Result<PaginatedDto<ScheduleResultDto>>> GetAllAsync(ScheduleFilterDto filterDto, int resourceId,
@@ -131,8 +137,7 @@ internal class ScheduleService : IScheduleService
         if (existingSchedule.AllowsMultiple != scheduleDto.AllowsMultiple)
             return Error.Schedule.MultipleSupportChange;
 
-        if (scheduleDto.DayOfWeek == null)
-            scheduleDto.DayOfWeek = scheduleDto.Date!.Value.DayOfWeek;
+        scheduleDto.DayOfWeek ??= scheduleDto.Date!.Value.DayOfWeek;
 
         var isDateOrTimeChanged = IsDateOrTimeChanged(existingSchedule, scheduleDto);
         if (isDateOrTimeChanged)
@@ -153,13 +158,13 @@ internal class ScheduleService : IScheduleService
 
         if (existingSchedule.Date.HasValue)
         {
-            BackgroundJob.Delete(existingSchedule.InProgressJobId);
-            BackgroundJob.Delete(existingSchedule.CompletedJobId);
+            _backgroundJobClient.Delete(existingSchedule.InProgressJobId);
+            _backgroundJobClient.Delete(existingSchedule.CompletedJobId);
         }
         else
         {
-            RecurringJob.RemoveIfExists(existingSchedule.InProgressJobId);
-            RecurringJob.RemoveIfExists(existingSchedule.CompletedJobId);
+            _recurringJobManager.RemoveIfExists(existingSchedule.InProgressJobId);
+            _recurringJobManager.RemoveIfExists(existingSchedule.CompletedJobId);
         }
 
         RegisterAndAttachJobs(existingSchedule, scheduleDto, existingSchedule.TenantId);
@@ -186,13 +191,13 @@ internal class ScheduleService : IScheduleService
 
         if (existingSchedule.Date.HasValue)
         {
-            BackgroundJob.Delete(inProgressJobId);
-            BackgroundJob.Delete(completedJobId);
+            _backgroundJobClient.Delete(inProgressJobId);
+            _backgroundJobClient.Delete(completedJobId);
         }
         else
         {
-            RecurringJob.RemoveIfExists(inProgressJobId);
-            RecurringJob.RemoveIfExists(completedJobId);
+            _recurringJobManager.RemoveIfExists(inProgressJobId);
+            _recurringJobManager.RemoveIfExists(completedJobId);
         }
 
         return Result.Success();
@@ -257,11 +262,11 @@ internal class ScheduleService : IScheduleService
                                   DateTime.UtcNow;
             var completedDelay = scheduleDto.Date.Value.ToDateTime(scheduleDto.EndTime, DateTimeKind.Utc) -
                                  DateTime.UtcNow;
-            inProgressJobId = BackgroundJob.Schedule(
+            inProgressJobId = _backgroundJobClient.Schedule(
                 () => MarkInProgressAndSaveSnapshotAsync(schedule.Id, currentTenantId, false),
                 inProgressDelay < TimeSpan.Zero ? TimeSpan.Zero : inProgressDelay);
 
-            completedJobId = BackgroundJob.Schedule(
+            completedJobId = _backgroundJobClient.Schedule(
                 () => MarkCompletedAsync(schedule.Id, currentTenantId, false),
                 completedDelay < TimeSpan.Zero ? TimeSpan.Zero : completedDelay);
         }
@@ -275,7 +280,7 @@ internal class ScheduleService : IScheduleService
             inProgressJobId = $"inprogress-{schedule.Id}";
             completedJobId = $"completed-{schedule.Id}";
 
-            RecurringJob.AddOrUpdate(
+            _recurringJobManager.AddOrUpdate(
                 inProgressJobId,
                 () => MarkInProgressAndSaveSnapshotAsync(schedule.Id, currentTenantId, true),
                 inProgressCron,
@@ -284,7 +289,7 @@ internal class ScheduleService : IScheduleService
                     TimeZone = TimeZoneInfo.Utc
                 });
 
-            RecurringJob.AddOrUpdate(
+            _recurringJobManager.AddOrUpdate(
                 completedJobId,
                 () => MarkCompletedAsync(schedule.Id, currentTenantId, true),
                 completedCron,

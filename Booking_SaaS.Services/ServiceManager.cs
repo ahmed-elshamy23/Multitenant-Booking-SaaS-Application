@@ -13,6 +13,7 @@ using Booking_SaaS.Services.Abstraction.Options;
 using Booking_SaaS.Services.Abstraction.Orchestrators;
 using Booking_SaaS.Services.Orchestrators;
 using FluentValidation;
+using Hangfire;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 
@@ -36,7 +37,7 @@ public class ServiceManager : IServiceManager
         IValidator<PaginatedDto<ScheduleResultDto>> schedulePaginationValidator,
         IValidator<ScheduleAddDto> scheduleValidator, IValidator<BookingFilterDto> bookingFilterValidator,
         IValidator<PaginatedDto<BookingDto>> bookingPaginationValidator, IValidator<BookingAddDto> bookingValidator,
-        ICachingService cachingService)
+        ICachingService cachingService, IBackgroundJobClient backgroundJobClient, IRecurringJobManager recurringJobManager)
     {
         var smtpClient = new Lazy<ISmtpClientWrapper>(() => new SmtpClientWrapper(emailOptions));
         var emailService = new Lazy<IEmailService>(() => new EmailService(emailOptions, smtpClient.Value));
@@ -50,7 +51,7 @@ public class ServiceManager : IServiceManager
                 resourceFilterValidator));
 
         var scheduleService = new Lazy<IScheduleService>(() => new ScheduleService(unitOfWork, scheduleFilterValidator,
-            mapper, schedulePaginationValidator, scheduleValidator));
+            mapper, schedulePaginationValidator, scheduleValidator, backgroundJobClient, recurringJobManager));
 
         var bookingService = new Lazy<IBookingService>(() =>
             new BookingService(unitOfWork, bookingFilterValidator, mapper, bookingPaginationValidator));
