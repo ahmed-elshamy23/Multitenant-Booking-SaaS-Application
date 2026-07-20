@@ -86,19 +86,21 @@ public class AuthenticationServiceTests
         _unitOfWork.Verify(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
     }
 
-    [Fact]
-    public async Task LoginAsync_ShouldPassAndGenerateCorrectTokensWhenCredentialsAreCorrect()
+    [Theory]
+    [InlineData(true)]
+    [InlineData(false)]
+    public async Task LoginAsync_ShouldPassAndGenerateCorrectTokensWhenCredentialsAreCorrect(bool isOwner)
     {
         var id = 1;
         RefreshToken? refreshToken = null;
         _userManager.Setup(x => x.FindByEmailAsync(It.IsAny<string>()))
-            .ReturnsAsync(new AppUser() { Id = 1, Email = _email });
+            .ReturnsAsync(new AppUser() { Id = 1, Email = _email, TenantId = isOwner ? null : 1 });
 
         _userManager.Setup(x => x.CheckPasswordAsync(It.IsAny<AppUser>(), It.IsAny<string>()))
             .ReturnsAsync(true);
 
         _userManager.Setup(x => x.GetRolesAsync(It.IsAny<AppUser>()))
-            .ReturnsAsync(["user"]);
+            .ReturnsAsync(isOwner ? [] : ["user"]);
 
         _repo.Setup(x => x.Add(It.IsAny<RefreshToken>()))
             .Callback<RefreshToken>(token => refreshToken = token);
@@ -169,8 +171,10 @@ public class AuthenticationServiceTests
         _userManager.Verify(x => x.GenerateEmailConfirmationTokenAsync(It.IsAny<AppUser>()), Times.Never);
     }
 
-    [Fact]
-    public async Task RegisterAsync_ShouldFailWhenAddingToRoleFails()
+    [Theory]
+    [InlineData(true)]
+    [InlineData(false)]
+    public async Task RegisterAsync_ShouldFailWhenAddingToRoleFails(bool isAdmin)
     {
         _registerValidator.Setup(x => x.Validate(It.IsAny<RegisterDto>()))
                           .Returns(new ValidationResult());
@@ -185,7 +189,7 @@ public class AuthenticationServiceTests
                     .ReturnsAsync(IdentityResult.Failed(new IdentityError()));
 
         var dto = new RegisterDto();
-        var result = await _authenticationService.RegisterAsync(dto, 1, true);
+        var result = await _authenticationService.RegisterAsync(dto, 1, isAdmin);
 
         result.IsSuccess.Should().BeFalse();
         result.Error.Should().NotBeNull();
@@ -193,8 +197,10 @@ public class AuthenticationServiceTests
         _userManager.Verify(x => x.GenerateEmailConfirmationTokenAsync(It.IsAny<AppUser>()), Times.Never);
     }
 
-    [Fact]
-    public async Task RegisterAsync_ShouldPassWhenUserSuccessfullyCreated()
+    [Theory]
+    [InlineData(true)]
+    [InlineData(false)]
+    public async Task RegisterAsync_ShouldPassWhenUserSuccessfullyCreated(bool isAdmin)
     {
         _registerValidator.Setup(x => x.Validate(It.IsAny<RegisterDto>()))
                           .Returns(new ValidationResult());
@@ -212,7 +218,7 @@ public class AuthenticationServiceTests
                     .ReturnsAsync("Test");
 
         var dto = new RegisterDto();
-        var result = await _authenticationService.RegisterAsync(dto, 1, true);
+        var result = await _authenticationService.RegisterAsync(dto, 1, isAdmin);
 
         result.IsSuccess.Should().BeTrue();
         result.Error.Should().BeNull();
